@@ -1,0 +1,25 @@
+.process {
+    background: url("process_bar.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #B2B2B2;
+    border-radius: 3px 3px 3px 3px;
+    height: 15px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 400px;
+}
+.process .percent {
+    background: url("process_bar_percent.png") repeat-x scroll 0 0 transparent;
+    border-radius: 3px 3px 3px 3px;
+    height: 15px;
+    width: 0;
+}
+.process .dr {
+    font-weight: bold;
+    left: 45%;
+    position: absolute;
+    text-align: center;
+}
+#xuly{
+    display: none;
+}

@@ -1,0 +1,101 @@
+
+#pop_bg {
+    background: url("../images/popup/bg_pop.png") repeat scroll 0 0 transparent;
+    cursor: wait;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#pop {
+    display: none;
+    left: 50%;
+    margin-left: -219px;
+    margin-top: -100px;
+    position: fixed;
+    top: 45%;
+    z-index: 1002;
+}
+/***Top******/
+#pop .top-left{
+    background: url("../images/popup/top-left.png") no-repeat scroll left top transparent;
+    height: 24px;    
+}
+#pop .top-right{
+    background: url("../images/popup/top-right.png") no-repeat scroll right top transparent;
+    height: 24px;    
+}
+#pop .top-mid{
+    background: url("../images/popup/top-mid.png") repeat-x scroll center top transparent;
+    height: 24px;
+    margin: 0 23px;
+    overflow: hidden;    
+}
+/***Mid******/
+#pop .mid-left{
+    background: url("../images/popup/mid-left.png") repeat-y scroll left top transparent;    
+}
+#pop .mid-right{
+    background: url("../images/popup/mid-right.png") repeat-y scroll right top transparent;    
+}
+#pop .mid-center{
+    background-color: #FFF;
+    margin: 0 23px;
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid #E5E5E5;    
+}
+/***Bot******/
+#pop .bot-left{
+    background: url("../images/popup/bot-left.png") no-repeat scroll left top transparent;
+    height: 24px;  
+}
+#pop .bot-right{
+    background: url("../images/popup/bot-right.png") no-repeat scroll right top transparent;
+    height: 24px;   
+}
+#pop .bot-mid{
+    background: url("../images/popup/bot-mid.png") repeat-x scroll center top transparent;
+    height: 24px;
+    margin: 0 23px;
+    overflow: hidden;    
+}
+
+
+/*
+#pop .top {
+    background: url("../images/popup/top-cart.png") no-repeat scroll 0 0 transparent;
+    height: 20px;
+    width: 473px;
+}
+#pop .mid {
+    background: url("../images/popup/mid_cart.png") repeat-y scroll 0 0 transparent;
+    width: 473px;
+}
+#pop .bot {
+    background: url("../images/popup/bot-cart.png") no-repeat scroll center bottom transparent;
+    height: 10px;
+    width: 473px;
+}
+#pop .mid .c-cart {
+    padding: 0 15px;
+}
+#pop #mod_box_cart {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E5E5E5;
+    padding: 5px;
+}
+*/
+#pop #close {
+    background: url("../images/popup/x.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 29px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 25px;
+}

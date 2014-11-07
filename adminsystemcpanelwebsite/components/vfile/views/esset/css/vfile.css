@@ -1,0 +1,318 @@
+.vfile-content{
+    background: #E0DFDE;
+    overflow: hidden;
+    padding: 2px;
+}
+.vfile-left{
+    width: 250px;
+    float: left;
+}
+.vfile-right{
+    padding-left: 250px;
+}
+.vfile-folder{
+    background: none repeat scroll 0 0 #F8F7F6;
+    border: 1px solid #ADABA9;
+    border-radius: 6px 6px 6px 6px;
+    margin: 4px 4px 0;
+    padding: 5px;
+    overflow: hidden;
+}
+div.file {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AAAAAA;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    margin: 3px;
+    padding: 4px;
+    float: left;
+    width: 80px;
+    overflow-x: hidden;
+    text-align: center;
+    white-space: nowrap;
+
+}
+div.file .thumb {
+    background: none no-repeat scroll center center transparent;
+    height: 80px;
+    width: 80px;
+}
+div.file:hover {
+    background: none repeat scroll 0 0 #DDEBF8;
+    border-color: #A7BED7;
+}
+div.file .name {
+    font-weight: bold;
+    margin-top: 4px;
+}
+div.file .time {
+    font-size: 10px;
+}
+div.file .size {
+    font-size: 10px;
+}
+#files div.selected, #files div.selected:hover {
+    background-color: #5B9BDA;
+    border-color: #2973BD;
+    color: #FFFFFF;
+}
+#toolbar {
+    border-radius: 3px 3px 3px 3px;
+    padding: 5px 0;
+    overflow: hidden;
+}
+#toolbar a {
+    background: none no-repeat scroll 2px center transparent;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 4px 4px;
+    color: #000000;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    outline: medium none;
+    padding: 4px 4px 4px 24px;
+}
+#toolbar a:hover, #toolbar a.hover {
+    background-color: #C9C7C4;
+    border-color: #AFADAA;
+}
+#toolbar a.selected {
+    background-color: #C9C7C4;
+    border-color: #3687E2;
+}
+#toolbar a[href="kcact:upload"] {
+    background-image: url("img/icons/upload.png");
+}
+#toolbar a.refresh {
+    background-image: url("../images/refresh.png");
+}
+#toolbar a[href="kcact:settings"] {
+    background-image: url("img/icons/settings.png");
+}
+#toolbar a[href="kcact:about"] {
+    background-image: url("img/icons/about.png");
+}
+#toolbar a[href="kcact:maximize"] {
+    background-image: url("img/icons/maximize.png");
+}
+.uploadifyQueueItem {
+    background-color: #F5F5F5;
+    border: 2px solid #E5E5E5;
+    font: 11px Verdana, Geneva, sans-serif;
+    margin-top: 5px;
+    padding: 5px;
+    width: 195px;
+}
+.uploadifyError {
+    background-color: #FDE5DD !important;
+    border: 2px solid #FBCBBC !important;
+}
+.uploadifyQueueItem .cancel {
+    float: right;
+}
+.uploadifyQueue .completed {
+    background-color: #E5E5E5;
+}
+.uploadifyProgress {
+    background-color: #E5E5E5;
+    margin-top: 10px;
+    width: 100%;
+}
+.uploadifyProgressBar {
+    background-color: #0099FF;
+    height: 3px;
+    width: 1px;
+}
+.uploadifyQueue{
+    height: 204px;
+    overflow: auto;
+}
+.treeview, .treeview ul { 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.treeview ul {
+    background-color: white;
+    margin-top: 4px;
+}
+
+.treeview .hitarea {
+    background: url(../images/treeview-default.gif) -64px -25px no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-left: -16px;
+    float: left;
+    cursor: pointer;
+}
+
+.treeview li { 
+    margin: 0;
+    padding: 3px 0pt 3px 16px;
+}
+
+.treeview a.selected {
+    background-color: #eee;
+}
+
+#treecontrol { 
+    margin: 1em 0; display: none; 
+}
+
+.treeview .hover { 
+    color: red; cursor: pointer; 
+}
+
+.treeview li { 
+    background: url(../images/treeview-default-line.gif) 0 0 no-repeat; 
+}
+.treeview li.collapsable, .treeview li.expandable { 
+    background-position: 0 -176px; 
+}
+
+.treeview .expandable-hitarea { 
+    background-position: -80px -3px; 
+}
+
+.treeview li.last { 
+    background-position: 0 -1766px 
+}
+.treeview li.lastCollapsable, 
+.treeview li.lastExpandable { 
+    background-image: url(../images/treeview-default.gif); 
+}  
+.treeview li.lastCollapsable { 
+    background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px 
+}
+
+.treeview div.lastCollapsable-hitarea, 
+.treeview div.lastExpandable-hitarea { 
+    background-position: 0; 
+}
+
+.treeview-red li { 
+    background-image: url(../images/treeview-red-line.gif);
+}
+.treeview-red .hitarea, 
+.treeview-red li.lastCollapsable, 
+.treeview-red li.lastExpandable { 
+    background-image: url(../images/treeview-red.gif); 
+} 
+
+.treeview-black li { 
+    background-image: url(../images/treeview-black-line.gif); 
+}
+.treeview-black .hitarea, 
+.treeview-black li.lastCollapsable, 
+.treeview-black li.lastExpandable { 
+    background-image: url(../images/treeview-black.gif); 
+}  
+
+.treeview-gray li { 
+    background-image: url(../images/treeview-gray-line.gif); 
+}
+.treeview-gray .hitarea, 
+.treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { 
+    background-image: url(../images/treeview-gray.gif); 
+} 
+
+.treeview-famfamfam li { 
+    background-image: url(../images/treeview-famfamfam-line.gif); 
+}
+.treeview-famfamfam .hitarea, 
+.treeview-famfamfam li.lastCollapsable, 
+.treeview-famfamfam li.lastExpandable { 
+    background-image: url(../images/treeview-famfamfam.gif); 
+} 
+
+
+.filetree li { 
+    padding: 3px 0 2px 16px; 
+}
+.filetree span.folder, .filetree span.file { 
+    padding: 1px 0 1px 16px; display: block; 
+}
+.filetree span.folder { 
+    background: url(../images/folder.gif) 0 0 no-repeat; 
+}
+.filetree li.expandable span.folder { 
+    background: url(../images/folder-closed.gif) 0 0 no-repeat; 
+}
+.filetree span.file { 
+    background: url(../images/file.gif) 0 0 no-repeat; 
+}
+.selectfile{
+    font-size: 11px;
+    width: 105px;
+}
+input[type="text"].inputfile{
+    padding: 2px;
+    width: 105px;
+}
+
+
+/* Generic context menu styles */
+.contextMenu {
+    position: absolute;
+    width: 120px;
+    z-index: 99999;
+    border: solid 1px #CCC;
+    background: #EEE;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+
+.contextMenu LI {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contextMenu A {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    line-height: 20px;
+    height: 20px;
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    outline: none;
+    padding: 1px 5px;
+    padding-left: 28px;
+}
+
+.contextMenu LI.hover A {
+    color: #FFF;
+    background-color: #3399FF;
+}
+
+.contextMenu LI.disabled A {
+    color: #AAA;
+    cursor: default;
+}
+
+.contextMenu LI.hover.disabled A {
+    background-color: transparent;
+}
+
+.contextMenu LI.separator {
+    border-top: solid 1px #CCC;
+}
+
+/*
+    Adding Icons
+    
+    You can add icons to the context menu by adding
+    classes to the respective LI element(s)
+*/
+
+.contextMenu LI.add A { background-image: url(../images/add.png); }
+.contextMenu LI.edit A { background-image: url(../images/page_white_edit.png); }
+.contextMenu LI.cut A { background-image: url(../images/cut.png); }
+.contextMenu LI.copy A { background-image: url(../images/page_white_copy.png); }
+.contextMenu LI.paste A { background-image: url(../images/page_white_paste.png); }
+.contextMenu LI.delete A { background-image: url(../images/page_white_delete.png); }
+.contextMenu LI.quit A { background-image: url(../images/door.png); }

@@ -1,0 +1,34 @@
+.pq_root{
+    border-bottom: 1px dashed #e5e5e5;
+    display: block;
+    font-weight: bold;
+    color: #FF0000;
+
+}
+.pq_parent{
+    border-bottom: 1px dashed #e5e5e5;
+    display: block;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 2px 0px;
+}
+ul.phanquyen{
+    margin-left: 40px;
+    display: block;
+    overflow: hidden;
+}
+ul.phanquyen li{
+    float: left;
+    padding-right : 10px;
+    min-width: 140px;
+}
+.pq{
+    background: #e5e5e5;
+    padding: 10px;
+}
+.pq .row1{
+    background: #FFF;
+}
+.pq .row0{
+    background: #CCC;
+}

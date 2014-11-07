@@ -1,0 +1,122 @@
+.divPopup_wrapper {
+    border: 1px solid #3B4046;
+    overflow: hidden;
+}
+.barpopup {
+    background-color: #5C5C5C;
+    overflow: hidden;
+    border-bottom: 1px solid #3B4046;
+} 
+
+.titlepopup { 
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    height: 23px;
+    padding-left: 10px;
+    padding-top: 7px;   
+    float: left;
+}
+.divPopup_wrapper .close {
+    background: url("../images/alert/close.gif") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 29px;
+    float: right;
+}
+.divPopup_wrapper .close:hover {
+    background: url("../images/alert/close.gif") no-repeat scroll 0 -16px transparent;
+    cursor: pointer;
+    height: 16px;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 29px;
+}
+#popup_container {
+    font-family: Arial;
+    font-size: 12px;
+    width: 280px; /* Dialog will be no smaller than this */
+    background: #FFF;
+    border: solid 5px #7EBFDF;
+    color: #000;
+
+}
+
+
+#popup_content {
+    padding: 0px;
+    margin: 0px;
+}
+
+#popup_content.alert {
+}
+
+#popup_content.confirm {
+
+}
+
+#popup_content.prompt {
+    
+}
+
+#popup_message {
+    display: block;
+    padding: 5px 5px;
+    text-align: center;
+
+}
+
+#popup_panel {
+    
+    margin: 0px;
+    background: none repeat scroll 0 0 #EDEDED;
+    padding: 5px;
+    overflow: hidden;
+    width: 280px;
+}
+#popup_panel_two{
+    margin: 0px;
+    background: none repeat scroll 0 0 #EDEDED;
+    padding: 5px 5px 5px 30px;
+    overflow: hidden;
+    width: 280px;
+}
+#popup_panel a{
+    text-align: center;
+}
+#popup_panel a.one{
+    position: relative;
+    left: 90px;
+}
+
+#popup_prompt {
+    margin: .5em 0em;
+}
+input#popup_ok{
+   
+    
+    
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 0px;
+    height: 24px;
+    margin: 0px;
+    text-decoration: none;
+    cursor: pointer;    
+}
+input#popup_cancel {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 0px;
+    height: 24px;
+    margin: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
