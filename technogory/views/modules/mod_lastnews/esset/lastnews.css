@@ -1,0 +1,17 @@
+ul.lastnews li{
+    list-style: none;
+    border-bottom: 1px solid #c1bfbf;
+
+    overflow: hidden;
+    display: block;
+    padding: 5px 0px;
+}
+ul.lastnews li .img{
+    margin-top: 5px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+}
+
+.clear { clear: both; }

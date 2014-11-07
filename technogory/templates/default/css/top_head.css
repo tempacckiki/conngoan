@@ -1,0 +1,152 @@
+#box-head-wapper{
+    width: 210px;
+    height: 328px;
+    overflow: hidden;
+    display: block;
+    float: right;
+    margin-top: 6px;
+	position:relative;
+    background: url("../images/bg-hot.png")no-repeat top;
+}
+#box-head-wapper div.title-hot-head{
+	clear: both;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #ff0000;
+	margin-bottom: 7px;
+	/*background: url("../images/title-hot-top.png")no-repeat center;*/
+	height: 25px;
+}
+div.box-deal-index{
+	clear: both;
+	height: 200px;
+}
+#box-head-wapper #topnew_slideshow{
+	width:204px;
+    height: 285px;
+    text-align: center;
+    text-align: center;
+    margin: auto;
+}
+#box-head-wapper #topnew_slideshow .img-thumb{
+	width:180px;
+    height:130px;
+    overflow: hidden;
+    text-align: center;
+    clear:both;
+    margin: auto;
+    margin-left: 10px;
+   /* border: dashed 1px #ccc;
+    background: #eee;
+   
+    padding: 1px;
+    */
+     margin-bottom: 4px;
+}
+#box-head-wapper #topnew_slideshow  h3.name {
+	clear:both;
+    font-weight: normal;
+    overflow: hidden;
+    height:38px;
+    margin: auto;
+    font-size: 12px;
+    width: 180px;
+    margin-left: 7px;
+}
+#box-head-wapper #topnew_slideshow  h3.name  a{
+    color: #333;
+    display: block;
+    font-weight: bold;
+}
+#box-head-wapper #topnew_slideshow  h3.name  a:hover{
+	text-decoration: underline;
+	color: #ff0000;
+}
+#box-head-wapper #topnew_slideshow p.price-old {
+    padding: 0px 0px 0px;
+    color: #666;
+    font-weight: bold;
+    text-decoration: line-through;
+    clear: both;
+}
+#box-head-wapper #topnew_slideshow p.price {
+	clear: both;
+    padding: 0px 0px 0px;
+    color: #ff0000;
+    font-weight: bold;
+}
+#box-head-wapper .next1 {
+   /* background: url("../images/icon-head.png") no-repeat scroll -176px 0px transparent;*/
+    top: 130px;
+    cursor: pointer;
+    height: 17px;
+    right: 8px;
+    position: absolute;
+    width: 18px;
+    z-index: 10;
+}
+#box-head-wapper .next1:hover {
+    /*background: url("../images/icon-head.png") no-repeat scroll -176px 0px transparent;*/
+}
+#box-head-wapper .pre {
+   /* background: url("../images/icon-head.png") no-repeat scroll 0 0px transparent;*/
+    top:130px;
+    cursor: pointer;
+    height: 17px;
+    left: 8px;
+    position: absolute;
+    width: 18px;
+    z-index: 10;
+}
+#box-head-wapper .pre:hover {
+   /* background: url("../images/icon-head.png") no-repeat scroll 0px 0px transparent;*/
+}
+
+/*--- cam ket ---*/
+div.note-right{
+	clear: both;
+	width: 100%;
+	margin: auto;
+	padding: 5px 0px;
+	position: relative;
+	margin-top: 3px;
+}
+div.note-right div.sub-note {
+	clear: both;
+	overflow: hidden;
+	width: 208px;
+	margin: auto;
+	float: none;
+	border: solid 1px #ccc;
+	background: url(../images/camket.png) no-repeat 0px 20px;
+	height: 100px;
+}
+
+div.note-right div.kep {
+	clear:both;
+	background: url(../images/stick.png) no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 33px;
+	height: 34px;
+}
+
+div.sub-note div.content {
+	float: right;
+	width: 149px;
+	overflow: hidden;
+	margin-top: 18px;
+	font-size: 11px;
+	overflow: hidden;
+}
+
+div.sub-note div.content ul.items li {
+	clear: both;
+	overflow: hidden;
+	background: url("../images/icon-sView.png")no-repeat -26px -68px;
+	padding: 1px 0px 1px 0px;
+	text-indent: 9px;
+}

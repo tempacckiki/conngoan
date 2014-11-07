@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Module Thống kê truy cập</name>
+    <author>DEV MyTranGroup</author>
+    <creationDate>01/06/2011</creationDate>
+    <copyright>www.mytrangroup.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@mytrangroup.com</authorEmail>
+    <authorUrl>http://www.mytrangroup.com</authorUrl>
+    <version>1.0</version>
+
+    <params>
+            <param name="number" type="list" default="default" label="Hình ảnh" description="Hình ảnh thay thế cho chữ số" >
+                <option value="bluesky">bluesky</option>
+                <option value="blushdw">blushdw</option>
+                <option value="bubble">bubble</option>
+                <option value="curly">curly</option>
+                <option value="default">default</option>
+                <option value="embwhite">embwhite</option>
+                <option value="gold">gold</option>
+                <option value="ledgreen">ledgreen</option>
+                <option value="ledred">ledred</option>
+                <option value="ledyellow">ledyellow</option>
+                <option value="links">links</option>
+                <option value="odoblack">odoblack</option>
+                <option value="odowhite">odowhite</option>
+                <option value="plainblue">plainblue</option>
+                <option value="silkscreen">silkscreen</option>
+                <option value="twotone">twotone</option>
+                <option value="wedgie">wedgie</option>
+            </param>
+            <param name="total_number" type="text" default="0" label="Chữ số hiển thị" description="Chũ số hiển thị. Mặc định để 0" />
+    </params>
+</install>

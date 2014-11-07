@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+
+.rss-content{
+	clear: both;
+	width: 1000px;
+	margin: auto;
+}
+
+.box-left-rss{
+	float: left;
+	width: 785px;
+	overflow: hidden;
+	margin-left: 5px;
+}
+
+.box-left-rss div.box-intro{
+	clear: both;
+	line-height: 1.5em;
+	padding: 10px 0px;
+	overflow: hidden;
+}
+
+.box-left-rss p.title-sub{
+	clear: both;
+	font-weight: bold;
+}
+
+.list-rss{
+	clear: both;
+	overflow: hidden;
+	
+}
+.list-rss ul.items{
+	clear: both;
+}
+
+.list-rss ul.items li{
+	clear: both;
+	padding: 5px 0px;
+	text-align: left;
+	overflow: hidden;
+}
+.list-rss ul.items li p.icon{
+	float: left;
+	width: 50px;
+	text-align: center;
+}
+
+.list-rss ul.items li p.menu{
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	margin-right: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.list-rss ul.items li p.menu a{
+	color: #333;
+	text-align: left;
+}
+
+.list-rss ul.items li p.link{
+	float: left;
+	overflow: hidden;
+}
+
+.list-rss ul.items li p.link a{
+	color: #333;
+}
+
+div.sub-item-rss{
+	clear: both;
+	overflow: hidden;
+	padding: 5px 0px;
+	margin-left: 15px;
+}
+div.sub-item-rss p.icon{
+	float: left;
+	width: 50px;
+}
+
+div.sub-item-rss p.menu{
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	margin-right: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+div.sub-item-rss p.link{
+	float: left;
+	overflow: hidden;
+}
+
+
+div.sub-item-rss2{
+	clear: both;
+	overflow: hidden;
+	padding: 5px 0px;
+	margin-left: 30px;
+}
+div.sub-item-rss2 p.icon{
+	float: left;
+	width: 50px;
+}
+
+div.sub-item-rss2 p.menu{
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	margin-right: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+div.sub-item-rss2 p.link{
+	float: left;
+	overflow: hidden;
+}
+
+
+
+.box-left-rss .intro-footer{
+	clear: both;
+	padding: 10px 0px;
+	overflow: hidden;
+}
+
+
+.box-left-rss p.title-footer{
+	clear: both;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.right-rss{
+	float: right;
+	width: 200px;
+	margin-right: 5px;
+	overflow: hidden;
+}

@@ -1,0 +1,180 @@
+@CHARSET "UTF-8";
+.box-buy-hot{
+	clear: both;
+	border: solid 1px #eee;
+	border-bottom: solid 1px #ccc;
+	width: 998px;
+	margin: auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.box-buy-hot div.title-main{
+	clear: both;
+	text-transform: uppercase;
+	overflow: hidden;
+	padding: 10px 5px;
+	font-weight: bold;
+	color: #000;
+	font-size: 14px;
+	font-family: Arial;
+}
+.box-buy-hot div.title-main span{
+	color: #ff0000;
+}
+.box-buy-hot div.box-tab{
+	clear: both;
+	background: url("../images/bg-tab-index.png")repeat-x;
+	height: 35px;
+}
+.box-buy-hot div.box-tab ul li{
+	float: left;
+	background: url("../images/line-tab-index.png")no-repeat right bottom;
+}
+
+.box-buy-hot div.box-tab ul li.select{
+	float: left;
+	background: url("../images/bg-tab-index-select.png")repeat-x;
+	height:35px;
+	overflow: hidden;
+}
+.box-buy-hot div.box-tab ul li.select a{
+	font-weight: bold;
+}
+
+.box-buy-hot div.box-tab ul li:hover{
+	float: left;
+	background: url("../images/bg-tab-index-select.png")repeat-x;
+	height: 35px;
+	overflow: hidden;
+}
+
+
+
+.box-buy-hot div.box-tab ul li a{
+	color: #333;
+	line-height: 35px;
+	padding: 0px 18px;
+	display: block;
+}
+
+.box-buy-hot div.box-tab ul li a img{
+	padding-right: 7px;
+}
+
+
+
+
+/*---- box-tab2 --*/
+.box-tab2{
+	clear: both;
+	border: solid 1px #ccc;
+	overflow: hidden;
+	width: 998px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.box-tab2 div.title-tab-2{
+	clear: both;
+	text-transform: uppercase;
+	color: #333;
+	padding:10px 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.box-tab2 div.title-tab-2 span{
+	color: #ff0000;
+}
+.box-tab2  div#tab-cat{
+	clear: both;
+	background: url("../images/bg-tab-index.png")repeat-x;
+	height: 40px;
+}
+.box-tab2  div#tab-cat ul.items{
+	clear: both;
+}
+.box-tab2  div#tab-cat ul.items li{
+	float: left;
+	background: url("../images/line-tab-index.png")no-repeat right bottom;
+}
+.box-tab2  div#tab-cat ul.items li a{
+	padding: 0px 18px;
+	line-height: 40px;
+	display: block;
+}
+.box-tab2  div#tab-cat ul.items li.select{
+	background: url("../images/bg-tab-index-select.png")repeat-x;
+}
+.box-tab2  div#tab-cat ul.items li.select a{
+	color: #333;
+	font-weight: bold;
+}
+.box-tab2  div#tab-cat ul.items li a img{
+	padding-right: 7px;
+}
+
+#box-items-index{
+	clear: both;
+}
+
+#box-items-index ul#items-index{
+	clear: both;
+	overflow: hidden;
+	padding: 10px 0px;
+	margin-left: 3px;
+}
+#box-items-index ul#items-index li{
+	float: left;
+	width: 180px;
+	margin: 7px;
+	border:solid 1px #eee;
+	text-align: center;
+	padding-bottom:7px;
+}
+
+#box-items-index ul#items-index li:hover{
+	float: left;
+	width: 180px;
+	margin: 7px;
+	border:solid 1px #666;
+	padding-bottom:7px;
+}
+#box-items-index ul#items-index li p.img{
+	clear: both;
+	width: 182px;
+	height:170px;
+	overflow: hidden;
+	padding: 1px;
+	text-align: center;
+}
+#box-items-index ul#items-index li p.img a{
+	height:170px;
+	display: block;
+	overflow: hidden;
+}
+#box-items-index ul#items-index li p.name{
+	clear: both;
+	padding: 5px 0px;
+	height: 35px;
+}
+#box-items-index ul#items-index li p.name a{
+	color: #333;
+	font-weight: bold;
+}
+#box-items-index ul#items-index li p.name a:hover{
+	color: #ff0000;
+	text-decoration: underline;
+}
+#box-items-index ul#items-index li p.price-old{
+	clear: both;
+	padding-bottom: 5px;
+}
+#box-items-index ul#items-index li p.price-old span{
+	text-decoration: line-through;
+}
+
+#box-items-index ul#items-index li p.price{
+	clear: both;
+	font-weight:bold;
+	color: #ff0000;
+}

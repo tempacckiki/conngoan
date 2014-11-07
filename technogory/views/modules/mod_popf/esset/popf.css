@@ -1,0 +1,79 @@
+.pop_f {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E5E5E5;
+    bottom: -2px;
+    box-shadow: 0 0px 5px #CCCCCC;
+    position: fixed;
+    right: 0;
+    width: 260px;
+    border-right : 0px;
+    border-bottom  : 0px;
+    z-index: 10;
+}
+.pop_f .top-pop {
+    background: url(bg_title_popf.png) repeat-x;
+    height: 30px;
+    position: relative;
+}
+.top-pop .title {
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    line-height: 30px;
+    width: 220px;
+}
+.top-pop .close_f_p {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+}
+.close_f_p .down{
+    float: left;
+    background: url(icon.png) no-repeat;
+    width: 24px;
+    height: 30px;
+}
+.close_f_p .down:hover{
+    background: url(icon.png) no-repeat scroll 0px -29px;
+}
+.close_f_p .remove{
+    float: left;
+    background: url(icon.png) no-repeat scroll -24px 0px;
+    width: 18px;
+    height: 30px;
+}
+.close_f_p .remove:hover{
+    background: url(icon.png) no-repeat scroll -24px -29px;
+}
+.pop_f .mid-pop {
+    
+    display: none;
+    overflow: hidden;
+    width: 260px;
+}
+.pop_f .pop-content {
+    position: relative;
+}
+.pop-content .action{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    z-index: 50;
+}
+.pop-content .down{
+    float: left;
+    background: url(icon_small.png) no-repeat;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.pop-content .remove{
+    float: left;
+    background: url(icon_small.png) no-repeat scroll -15px 0px;
+    width: 15px;
+    height: 12px;
+}

@@ -1,0 +1,207 @@
+.caroufredsel_wrapper{
+	margin-left: 8px;
+	height: 376px;
+}
+.image_hethong {
+	clear:both;
+    height: 376px;
+    position: relative;
+    width: 100%;
+	padding-bottom:10px;
+	margin:auto;
+	background: url("../images/bg-item.png")repeat-x bottom;
+}
+.image_hethong a.next {
+    background: url("../images/arrow-index.png") no-repeat scroll 0px 0px transparent;
+    right: -2px;
+    top: -1px;
+	position: absolute;
+	z-index: 100;
+}
+.image_hethong a.prev {
+    background: url("../images/arrow-index.png") no-repeat scroll 0px -51px transparent;
+    left: -2px;
+    top: 150px;
+}
+
+.image_hethong a.next, .image_hethong a.prev {
+    display: block;
+    height: 49px;
+    position: absolute;
+    width: 37px;
+    top: 150px;
+	z-index: 100;
+}
+.image_hethong a.prev:hover {
+    background: url("../images/arrow-index.png") no-repeat scroll 0px -51px transparent;
+}
+
+.image_hethong a.next:hover {
+    background: url("../images/arrow-index.png") no-repeat scroll 0px 0 transparent;  
+}
+.image_hethong a.prev span, .image_hethong a.next span {
+    display: none;
+}
+.image_hethong ul#mod_hethong{
+	clear: both;
+	display: block;
+	margin-top: 8px;
+}
+.image_hethong ul#mod_hethong li {
+    display: block;
+    float: left;
+    height: 350px;
+	margin:3px;
+    width: 188px;
+	border: solid 1px #eee;
+	position: relative;
+}
+.image_hethong ul#mod_hethong li div.box-info-index{
+	position: absolute;
+	z-index: 2;
+
+}
+.image_hethong ul#mod_hethong li:hover div.box-info-index{
+	clear:both;
+	border:2px solid #ccc;
+    color: #333;
+	height: 350px;
+}
+.image_hethong ul#mod_hethong li:hover div.box-info-index p.name a{
+	color: #333;
+}
+.image_hethong ul#mod_hethong li:hover div.box-info-index p.price{
+	color: #333;
+}
+
+.image_hethong ul#mod_hethong li:hover div.box-info-index p.price-old{
+	color: #333;
+}
+
+.image_hethong ul#mod_hethong li div.tang-pham{
+	clear: both;
+	overflow: hidden;
+	width: 180px;
+	margin: auto;
+	font-size: 11px;
+}
+.image_hethong ul#mod_hethong li div.tang-pham ul.item{
+	clear: both;
+	height: 50px;
+	padding-bottom: 10px;
+}
+.image_hethong ul#mod_hethong li div.tang-pham ul.item li{
+	display: block;
+    float: none;
+    height: auto;
+	margin:0;
+    width: auto;
+	position: relative;
+	background: url("../images/icon-sView.png")no-repeat -26px -68px;
+	padding-left: 10px;
+	border: none;
+}
+.image_hethong ul#mod_hethong li div.discount-off{
+	position: absolute;
+	z-index: 5;
+	top: 2px;
+	right: 1px;
+	background: url("../images/icon-sprites.png")no-repeat 0px -97px;
+	width: 62px;
+	height:68px;
+	overflow: hidden;
+	text-align: center;
+	color: #fff;
+	
+}
+.image_hethong ul#mod_hethong li div.discount-off p.label{
+	clear: both;
+	padding-top: 10px;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+}
+
+.image_hethong ul#mod_hethong li div.discount-off p.sales-off{
+	clear: both;
+	padding-top:5px;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+.image_hethong ul#mod_hethong li p.img{
+	clear:both;
+	width:186px;
+	height:186px;
+	border: solid 1px #fff;
+	overflow: hidden;
+	padding: 1px;
+}
+
+.image_hethong ul#mod_hethong li p.img a {
+    display: block;
+    width: 186px;
+	height:186px;
+    overflow: hidden;
+	text-align: center;
+}
+
+.image_hethong ul#mod_hethong li p.name{
+	clear: both;
+	padding: 5px 0px 10px;
+	text-align: left;
+	width: 180px;
+	height: 35px;
+	font-weight: bold;
+	margin: auto;
+}
+.image_hethong ul#mod_hethong li p.name a:hover{
+	text-decoration: underline;
+}
+.image_hethong ul#mod_hethong li p.price{
+	clear:both;
+	padding: 3px 5px 0px 0px;
+	text-align: left;
+	color: #ff0000;
+	font-size: 18px;
+	font-weight: bold;
+	width: 170px;
+	margin: auto;
+}
+.image_hethong ul#mod_hethong li p.price-old{
+	clear:both;
+	padding: 3px 0px 5px 5px;
+	text-align: left;
+	text-decoration:line-through;	
+	color: #999;
+	float: left;
+	font-size: 14px;
+	width: 170px;
+	margin: auto;
+}
+
+.image_hethong ul#mod_hethong li div.buttom-buy{
+	display: none;
+	background: url("../images/bg-btn.png")no-repeat;
+	width: 121px;
+	height: 41px;
+	overflow: hidden;
+	cursor: pointer;
+	position: absolute;
+	z-index: 50;
+	top: 145px;
+	left: 20%;
+	line-height: 41px;
+}
+.image_hethong ul#mod_hethong li div.buttom-buy p.text a{
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	display: block;
+	text-indent: 23px;
+}

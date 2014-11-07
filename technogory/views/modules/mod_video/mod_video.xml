@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Module Video</name>
+    <author>DEV MyTranGroup</author>
+    <creationDate>01/06/2011</creationDate>
+    <copyright>www.mytrangroup.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@mytrangroup.com</authorEmail>
+    <authorUrl>http://www.mytrangroup.com</authorUrl>
+    <version>1.0</version>
+
+    <params>
+        <param name="w_video" type="text" default="250" label="Chiều rộng" description="Chiều rộng Player" />
+        <param name="h_video" type="text" default="220" label="Chiều cao" description="Chiều cao Player" />
+        <param name="v_limit" type="text" default="5" label="Số lượng Video" description="Cho phép hiển thị bao nhiêu Video" />
+    </params>
+</install>

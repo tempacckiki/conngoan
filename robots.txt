@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /captcha/
+Disallow: /api/
+Disallow: /demo/
+Disallow: /technogory/templates/
+Disallow: /openid/
+Disallow: /sangiare/
+Disallow: /adminsystemcpanelwebsite/

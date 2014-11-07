@@ -1,0 +1,200 @@
+@CHARSET "UTF-8";
+p.title-info{
+	clear: both;
+	font-size: 14px;
+	color: #ff0000;
+	padding: 10px 0px 10px 15px;
+	font-weight: bold;
+}
+.box-more-cart{
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+div.box-login-alobuy{
+	clear: both;
+	width: 470px;
+	border: solid 1px #ccc;
+	float: left;
+	margin: 10px;
+	border-radius:5px; 
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px; 
+	-khtml-border-radius:5px; 
+}
+
+div.box-login-alobuy p.title{
+	clear: both;
+	background: url("../images/bg-tab.gif")repeat-x;
+	height: 38px;
+	line-height: 38px;
+	position: relative;
+	padding-right: 10px;
+	border-radius:5px 5px 0px 0px; 
+	-moz-border-radius:5px 0px 0px; 
+	-webkit-border-radius:5px 0px 0px; 
+	-khtml-border-radius:5px 0px 0px;
+	text-transform: uppercase;
+	font-weight: bold; 
+	text-indent: 10px;
+}
+div.box-login-alobuy div.item{
+	clear: both;
+	width: 420px;
+	margin: auto;
+	overflow: hidden;
+	padding: 5px 0px;
+}
+div.no-remember{
+	clear: both;
+	margin-left: 100px;
+}
+div.box-login-alobuy div.item-login-orther p.label{
+	clear: both;
+	float: left;
+	width: 350px;
+	overflow: hidden;
+	display: block;
+	text-align: right;
+	padding-right: 10px;
+	line-height: 30px;
+}
+div.box-login-alobuy div.item-login-orther p.col{
+	float:left;
+	background: url("../images/cart-sprites.png")no-repeat 0px -95px;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	display: block;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+div.box-login-alobuy div.item-login-orther p.col a{
+	overflow: hidden;
+	display: block;
+}
+div.box-login-alobuy div.item-login-orther p.col1{
+	float:left;
+	background: url("../images/cart-sprites.png")no-repeat -63px -95px;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	display: block;
+	margin-right: 5px;
+}
+div.box-login-alobuy div.item-login-orther p.col1 a{
+	overflow: hidden;
+	display: block;
+}
+
+div.box-login-alobuy div.item-login-orther p.col2{
+	float:left;
+	background: url("../images/cart-sprites.png")no-repeat 0px -124px;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	display: block;
+}
+div.box-login-alobuy div.item-login-orther p.col2 a{
+	overflow: hidden;
+	display: block;
+}
+
+div.box-login-alobuy div.item p.label{
+	clear: both;
+	float: left;
+	width: 80px;
+	overflow: hidden;
+	line-height: 35px;
+	font-weight: bold;
+}
+div.box-login-alobuy div.item input[type="text"]{
+	box-shadow: 1px 2px 3px #ccc inset;
+	width: 325px;
+	height: 25px;
+	padding: 5px;
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px; 
+	-khtml-border-radius:3px; 
+}
+div.box-login-alobuy div.item input[type="password"]{
+	box-shadow: 1px 2px 3px #ccc inset;
+	width: 325px;
+	height: 25px;
+	padding: 5px;
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px; 
+	-khtml-border-radius:3px; 
+}
+div.box-login-alobuy div.item input[type="submit"]{
+	float:right;
+	background: url("../images/cart-sprites.png")no-repeat 0px 0px;
+	height: 41px;
+	width: 147px;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+div.box-login-alobuy div.item input[type="submit"].reset-pass{
+	float:right;
+	background: url("../images/cart-sprites.png")no-repeat 0px -152px;
+	height: 41px;
+	width: 147px;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+div.box-no-login-more{
+	float:right;
+	width: 480px;
+	height:262px;
+	border: solid 1px #ccc;
+	margin: 10px;
+	border-radius:5px; 
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px; 
+	-khtml-border-radius:5px; 
+}
+div.box-no-login-more p.title{
+	clear: both;
+	background: url("../images/bg-tab.gif")repeat-x;
+	height: 38px;
+	line-height: 38px;
+	position: relative;
+	padding-right: 10px;
+	border-radius:5px 5px 0px 0px; 
+	-moz-border-radius:5px 0px 0px; 
+	-webkit-border-radius:5px 0px 0px; 
+	-khtml-border-radius:5px 0px 0px;
+	text-transform: uppercase;
+	font-weight: bold; 
+	text-indent: 10px;
+}
+div.box-no-login-more p.amonymos{
+	clear: both;
+	padding: 0px 0px 15px;
+	background: url("../images/anonymous.png")no-repeat center top;
+	text-align: center;
+	font-weight: bold;
+	overflow: hidden;
+	display: block;
+	margin-top: 10px;
+}
+
+div.box-no-login-more div.buttom-no-login{
+	clear:both;
+	background: url("../images/cart-sprites.png")no-repeat 0px -44px;
+	height: 41px;
+	width: 195px;
+	border: none;
+	margin: auto;
+	margin-bottom: 15px;
+}
+div.box-no-login-more div.buttom-no-login a{
+	display: block;
+	overflow: hidden;
+	height: 41px;
+}

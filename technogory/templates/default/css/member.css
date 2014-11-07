@@ -1,0 +1,105 @@
+.register-box-member{
+	clear: both;
+	float: left;
+	width: 690px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	border: solid 1px #eee;
+	margin-top: 10px;
+}
+.register-box-member div.row-frm-member{
+	clear: both;
+	margin: 10px 5px;
+}
+.register-box-member div.row-frm-member label{
+	clear: both;
+	float: left;
+	width: 125px;
+	overflow: hidden;
+	line-height: 30px;
+}
+.register-box-member div.row-frm-member input[type="text"]{
+	width: 350px;
+	height: 20px;
+	padding: 5px;
+	background: url("../images/bginput.png?version=123")repeat-x;
+}
+.register-box-member div.row-frm-member select{
+	width: 360px;
+	height: 30px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+
+.register-box-member div.row-frm-member input[type="password"]{
+	width: 200px;
+	height: 20px;
+	padding: 5px;
+	background: url("../images/bginput.png?version=123")repeat-x;
+}
+.register-box-member div.row-frm-member input[type="submit"]{
+	width: 120px;
+	height: 32px;
+	padding: 0px 10px;
+	background: url("../images/line-button.png?version=123")repeat-x;
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.box-login-member{
+	float: right;
+	width: 270px;
+	border: solid 1px #eee;
+	margin-top: 10px;
+	padding: 10px;
+}
+.box-login-member p.title{
+	clear: both;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+div.login-this{
+	clear: both;
+	background: #eee;
+	overflow: hidden;
+	padding: 7px;
+	overflow: hidden;
+	border: solid 1px #ccc;
+	margin-top: 10px;
+}
+div.login-this p.title{
+	clear: both;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+div.login-this div.row-item{
+	clear: both;
+	padding: 5px 0px;
+}
+div.login-this div.row-item label{
+	clear: both;
+	float: left;
+	width: 60px;
+	overflow: hidden;
+	line-height: 30px;
+}
+
+div.login-this div.row-item input[type="text"]{
+	width: 185px;
+	height: 20px;
+	padding: 3px;	
+}
+div.login-this div.row-item input[type="submit"]{
+	background: url("../images/line-button.png?version=123")repeat-x;
+	border: none;
+	padding: 5px 10px;
+	overflow: hidden;
+	height: 32px;
+	color: #fff;
+	cursor: pointer;
+}

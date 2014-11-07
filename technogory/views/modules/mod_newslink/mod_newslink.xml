@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Module hiển thị tin mới nhất</name>
+    <author>Mytran Group</author>
+    <creationDate>01/06/2011</creationDate>
+    <copyright>www.mytrangroup.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@mytrangroup.com</authorEmail>
+    <authorUrl>http://www.mytrangroup.com</authorUrl>
+    <version>1.0</version>
+
+    <params>   
+        <param name="catid" type="text" default="" label="ID Chủ đề con" description="Nhập ID cách nhau bằng dấu ," />
+        <param name="max" type="text" default="200" label="Số ký tự cho phép" description="" />         
+    </params>
+</install>

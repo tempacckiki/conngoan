@@ -1,0 +1,433 @@
+@CHARSET "UTF-8";
+dl,dt,dd{
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.box-head-top{
+	clear: both;
+	position: relative;
+}
+
+.box-head-top div.deal-top{
+	clear: both;
+	float: left;
+	width: 685px;
+	height:400px;
+	border: solid 1px #ccc;
+	box-shadow: 0 0 2px #CACACA;
+	-moz-box-shadow: 0 0 2px #CACACA;
+	-khtml-box-shadow: 0 0 2px #CACACA;
+	-webkit-box-shadow: 0 0 2px #CACACA;
+	display: inline-block;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.box-head-top div.deal-top h1.name{
+	clear: both;
+	padding: 10px;
+	overflow: hidden;
+	font-size: 18px;
+	line-height:20px;
+	height: 40px;
+}
+box-head-top div.deal-top h1.name a{
+	color: #333;
+}
+box-head-top div.deal-top h1.name a:hover{
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+
+.box-head-top div.deal-top div.box-left-0{
+	clear: both;
+	width: 250px;
+	float: left;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-price{
+	clear: both;
+	background: url("../images/deal-sprites.png")no-repeat 0px 0px;
+	width: 271px;
+	height:80px;
+	margin-left: -21px;
+	position: absolute;
+	z-index: 100;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-price div.price-sale{
+	clear: both;
+	float: left;
+	width: 130px;
+	margin-left: 21px;
+	margin-top: 10px;
+	color: #fff;
+	font-weight: bold;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-price div.price-sale p.price{
+	clear: both;
+	padding-top: 10px;
+	color: #ffff00;
+	text-shadow: 0px 1px 1px #000;
+	font-size: 20px;
+}
+
+.box-head-top div.deal-top div.box-left-0 div.box-price div.button-deal{
+	float: right;
+	width: 107px;
+	height:37px;
+	background: url("../images/sprite-buttom.png")no-repeat 0px 0px;
+	margin-top: 16px;
+	margin-right: 10px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-price div.button-deal:hover{
+	float: right;
+	width: 107px;
+	height:37px;
+	background: url("../images/sprite-buttom.png")no-repeat 0px -38px;
+	margin-top: 16px;
+	margin-right: 10px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-price div.button-deal a{
+	display: block;
+	height: 37px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other{
+	clear: both;
+	overflow: hidden;
+	display: block;
+	margin-top: 68px;
+	border: 1px solid #FFED85;
+	border-top: solid 7px #ECD867;
+	margin-left: 10px;
+	width: 235px;
+	height:235px;
+	background: #FFF7C9;
+	padding: 10px 0px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl dd {
+	font-weight: bold;
+	padding-bottom: 5px;
+	clear: both;
+	text-align: left;
+}
+
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal{
+	font-weight: bold;
+	clear: both;
+	border-bottom: solid 1px #ccc;
+	padding: 10px 0px;
+	overflow: hidden;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl.price-old{
+	clear: both;
+	float: left;
+	width: 33%;
+	overflow: hidden;
+	text-align: left;
+	margin-left: 5px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl.price-old dd{
+	text-decoration: line-through;
+}
+
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl.discount{
+	float: left;
+	width: 28%;
+	overflow: hidden;
+	text-align: center;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl.discount dd{
+	text-align: center;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl.off{
+	float: right;
+	width: 33%;
+	overflow: hidden;
+	text-align: right;
+	margin-right: 5px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.info-price-deal dl.off dd{
+	text-align: right;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info{
+	clear: both;
+	padding-top: 10px;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #ccc;
+	padding-bottom: 10px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info p.number-letter{
+	clear: both;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info p.number-letter strong{
+	color: #ff0000;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info div.min{
+	clear: both;
+	background: url(../images/people-icon.png) no-repeat scroll -8px -36px;
+	height: 22px;
+	width: 20px;
+	float: left;
+	overflow: hidden;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info div.progress-bar{
+	float: left;
+	height: 18px;
+	margin-left: 3px;
+	width: 180px;
+	background: url(../images/progressbar.png) no-repeat;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info div.progress-bar div.l_p{
+	background: url(../images/progressbar.png) no-repeat scroll 0px -23px;
+	width: 8px;
+	height: 18px;
+	float: left;
+	margin-top: 2px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info div.progress-bar div.r_p{
+	background: url(../images/progressbar_r.png) no-repeat right;
+	position: relative;
+	height: 14px;
+	float: left;
+	margin-top: 2px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info div.progress-bar div.r_p div.node{
+	background: url("../images/proce_node.png") no-repeat scroll 0 0 transparent;
+	height: 10px;
+	position: absolute;
+	right: -3px;
+	top: -7px;
+	width: 11px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info div.max{
+	background: url(../images/people-icon.png) no-repeat scroll 0px 0px;
+	height: 22px;
+	width: 30px;
+	float: left;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info p.number-buyer{
+	clear: both;
+	padding: 7px 0px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.box-buyer-info p.number-buyer strong{
+	color: #ff0000;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.chinh-hang{
+	clear: both;
+	border-top: solid 1px #fff;
+	overflow: hidden;
+	background: url("../images/guarantee.png")no-repeat;
+	height: 75px;
+}
+.box-head-top div.deal-top div.box-left-0 div.box-other div.chinh-hang div.content{
+	float: right;
+	width: 145px;
+	margin-top: 15px;
+	font-weight: bold;
+	line-height: 1.5em;
+	font-size: 16px;
+	color: #666;
+}
+div.gallary-box{
+	float:right;
+	margin-right: 10px;
+	width: 410px;
+	border: solid 1px #ccc;
+	background: #eee;
+}
+
+.box-head-top div.right-deal-hot{
+	float: right;
+	width: 300px;
+	border: solid 1px #ccc;
+	box-shadow: 0 0 2px #CACACA;
+	-moz-box-shadow: 0 0 2px #CACACA;
+	-khtml-box-shadow: 0 0 2px #CACACA;
+	-webkit-box-shadow: 0 0 2px #CACACA;
+}
+div.groups-cat{
+	clear: both;
+	overflow: hidden;
+}
+div.groups-cat div.title-cat{
+	clear: both;
+	width: 100%;
+	height: 35px;
+	text-transform: uppercase;
+	color: #333;
+	font-weight: bold;
+	line-height: 2.8em;
+	margin: auto;
+	position: relative;
+	float: left;
+	border-bottom: 1px solid #D9EBF7;
+	border-top: solid 4px #f70707;
+	background: url(../images/bg-vien.png) repeat-x top;
+	text-indent: 5px;
+	margin-top: 10px;
+}
+div.groups-cat div.title-cat p.text{
+	clear: both;
+	width:900px;
+	float: left;
+	overflow: hidden;
+}
+div.groups-cat div.title-cat p.text a:hover{
+	text-decoration: underline;
+}
+div.groups-cat div.title-cat span.more{
+	float: right;
+	width: 80px;
+	overflow: hidden;
+	text-align: right;
+	margin-right: 5px;
+	text-decoration: underline;
+}
+div.groups-cat div.title-cat span.more a:hover{
+	text-decoration: underline;
+}
+ul.items-box{
+	clear: both;
+	width: 100%;
+	border: solid 1px #ccc;
+	border-top:none;
+	overflow: hidden;
+}
+
+ul.items-box li{
+	float: left;
+	width: 310px;
+	margin: 10px;
+	border: solid 1px #ccc;
+	box-shadow: 0 0 2px #eee;
+	-moz-box-shadow: 0 0 2px #eee;
+	-khtml-box-shadow: 0 0 2px #eee;
+	-webkit-box-shadow: 0 0 2px #eee;
+}
+ul.items-box li div.img{
+	clear: both;
+	width: 302px;
+	height: 250px;
+	overflow: hidden;
+	border: solid 1px #eee;
+	margin: auto;
+	position: relative;
+	margin-top: 7px;
+}
+ul.items-box li div.img div.deal-circle{
+	position: absolute;
+	z-index: 5;
+	background: url("../images/sticker.png")no-repeat;
+	width: 67px;
+	height:65px;
+	top:2px;
+	right: 0px;
+}
+ul.items-box li div.img div.deal-circle p.text{
+	clear: both;
+	font-size: 11px;
+	text-align: center;
+	line-height:30px;
+	height: 30px;
+}
+ul.items-box li div.img div.deal-circle p.off{
+	clear: both;
+	text-align: center;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+	font-weight: bold;
+	font-size: 14px;
+}
+ul.items-box li p.name-decription{
+	clear: both;
+	/* border-top: solid 1px #fff;
+	background: #f2f2f2;
+	border-bottom: solid 1px #CACACA; */
+	padding: 5px;
+	height: 50px;
+	font-weight: bold;
+}
+ul.items-box li p.name-decription a:hover{
+	text-decoration: underline;
+}
+
+ul.items-box li div.info-deal-bootom{
+	clear: both;
+	border-top: solid 1px #fff;
+	background: #f2f2f2;
+	border-bottom: solid 1px #CACACA;
+	padding: 5px;
+	overflow: hidden;
+}
+ul.items-box li div.view-old-price{
+	clear: both;
+	position: absolute;
+	z-index: 50;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url("../images/trans_50.png")repeat;
+	padding: 5px;
+	height: 20px;
+	color: #fff;
+}
+ul.items-box li div.view-old-price p.price-old{
+	clear: both;
+	text-decoration: line-through;
+	width: 145px;
+	float: left;
+}
+ul.items-box li div.view-old-price p.views{
+	float: right;
+	width: 100px;
+	overflow: hidden;
+	text-align: right;
+}
+ul.items-box li div.view-old-price p.views strong{
+	color: #ffff00;
+}
+
+ul.items-box li div.info-deal-bootom p.price-sales{
+	clear:both;
+	float: left;
+	width: 140px;
+	font-size: 18px;
+	color: #ff0000;
+	font-weight: bold;
+}
+ul.items-box li div.info-deal-bootom p.price-sales span{
+	clear: both;
+	overflow: hidden;
+	display: block;
+	color: #666;
+	font-size: 12px;
+	padding-bottom: 5px; 
+}
+ul.items-box li div.info-deal-bootom p.buttom-buy{
+	float: right;
+	width: 107px;
+	height:37px;
+	background: url("../images/sprite-buttom.png")no-repeat 0px 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+ul.items-box li div.info-deal-bootom p.buttom-buy:hover{
+	float: right;
+	width: 107px;
+	height:37px;
+	background: url("../images/sprite-buttom.png")no-repeat 0px -38px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+ul.items-box li div.info-deal-bootom p.buttom-buy a{
+	display: block;
+	height: 37px;
+}

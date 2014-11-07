@@ -1,0 +1,179 @@
+/*******
+* Style Pagination 
+*/
+.pages{
+    text-align: right;
+    padding-top : 10px;
+}
+.pages .pagebar-mainbody a,.pagelink-current{
+    display:inline-block;
+    border:1px solid #CACACA;
+    border-radius: 5px 5px 5px 5px;
+    margin-left:1px;
+    min-width:12px;
+    overflow:visible;
+    padding:1px 5px 2px;
+    text-align:center;
+    vertical-align:middle;
+    white-space:nowrap;
+    width:auto !important;
+    color:#333;
+    background-color: #F6F6F6;
+}
+.pagelink-current{
+    font-weight: bold;
+}
+.pages .pagebar-mainbody a img{
+    margin-top:6px;
+}
+.pagelink-current,.pages .pagebar-mainbody a:hover  {
+    background:#dfdfdf none repeat scroll 0 0;
+    border:1px solid #CACACA;
+    color:#333;
+    border-radius: 5px 5px 5px 5px;
+}
+.pages .first{
+    background: url(../images/first.png)  no-repeat scroll 2px 4px;
+
+}
+.pages .prev{
+    background: url(../images/prev.png)  no-repeat scroll 1px 4px;
+
+}
+.pages .next{
+    background: url(../images/next.png)  no-repeat scroll 3px 4px;
+
+}
+
+.pages .last{
+    background: url(../images/last.png)  no-repeat scroll 2px 4px;
+}
+.current-page{
+    text-align: center;
+}
+
+/*********
+* fl fr
+*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.show_notice {
+    background: none repeat scroll 0 0 #FFF8C7;
+    border: 1px dashed #B7AA4E;
+    margin-bottom: 10px;
+    padding: 8px;
+	width: 984px;
+	margin: auto;
+}
+.show_error {
+    background: none repeat scroll 0 0 #FEEEEE;
+    border: 1px dashed #FF0000;
+    color: #FF0000;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+.show_error ul {
+    padding-left: 30px;
+}
+.show_error a {
+    color: #FF0000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.show_success {
+    background: none repeat scroll 0 0 #EEFFE5;
+    border: 1px dashed #2B8001;
+    color: #2B8001;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+.show_success ul {
+    padding-left: 30px;
+}
+.show_success a {
+    color: #2B8001;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.show_notice, .show_error, .show_success {
+    font-family: Tahoma;
+    font-size: 13px;
+}
+ul.links {
+    background: url(../images/link.png) no-repeat left bottom;
+    display: block;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+ul.links li {
+    float: left;
+    list-style: none outside none;
+    padding-bottom: 3px;
+}
+ul.links li.home {
+    font-size: 13px;
+    font-weight: bold;
+}
+ul.links li.item {
+    background: url("../images/arrow2.png") no-repeat scroll 0 7px transparent;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+label.error{
+    float: left;
+    color: #FF0000;
+    font-size: 11px;
+}
+table.poll {
+    width: 600px;
+}
+table.poll td {
+    padding: 5px;
+    vertical-align: top;
+}
+table.poll td.percent {
+    color: #FF0000;
+    font-weight: bold;
+    width: 60px;
+}
+table.poll td .hits{
+    position: absolute;
+    left: 45%;
+}
+table.poll td.label {
+    text-align: right;
+}
+.process_bar{
+    background: url(../images/process_bar.png) repeat-x;
+    height: 15px;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #11943C;
+    position: relative;
+}
+.poll-title {
+    color: #FF0000;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+.bar {
+    background: url(../images/process_bar_percent.png);
+    height: 15px;
+    text-align: center;
+    border-radius: 3px 3px 3px 3px;
+
+}
+.poll_static {
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+

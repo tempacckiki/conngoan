@@ -1,0 +1,10 @@
+.mod_login{
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.mod_login .label{
+    float: left;
+    width: 90px;
+    text-align: right;
+    padding-right: 5px;
+}

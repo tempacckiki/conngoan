@@ -1,0 +1,63 @@
+@CHARSET "utf-8";
+.box-form{
+	clear: both;
+	float: left;
+	width: 600px;
+	overflow: hidden;
+	padding: 10px;
+	border-right: dotted 1px #eee;
+	margin-top: 10px;
+}
+
+.box-contacts{
+	float: right;
+	width: 350px;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.box-contacts p.title{
+	clear: both;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.box-contacts ul.items-contact{
+	clear: both;
+	overflow: hidden;
+}
+.box-contacts ul.items-contact li{
+	clear: both;
+	padding: 3px 0px;
+}
+
+.box-form div.contact_items{
+	clear: both;
+	padding: 5px 0px;
+}
+.box-form div.contact_items .label{
+	clear: both;
+	float: left;
+	width: 110px;
+	overflow: hidden;
+	font-weight: bold;
+}
+.box-form div.contact_items input[type="text"]{
+	width: 400px;
+	background: url("../images/bginput.png?version=123")repeat-x;
+	padding: 5px;
+	height: 18px;
+	border: solid 1px #eee;
+
+}
+.box-form div.contact_items input[type="submit"]{
+	background: url("../images/line-button.png?version=123")repeat-x;
+	padding: 5px 15px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}

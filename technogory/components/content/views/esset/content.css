@@ -1,0 +1,77 @@
+.content{
+    padding: 5px;
+}
+.content ul li{
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #e5e5e5;
+    padding-bottom: 5px;
+}
+.content ul li .img{
+    padding-top: 5px;
+    float: left;
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    display: block;
+    overflow: hidden;
+}
+.content ul li .img img{
+    width: 150px;
+}
+.content ul li h3.title{
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.content_detail_title{
+    clear: both;
+    color: #11943C;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom : 5px;
+}
+.content_detail_api{
+    overflow: hidden;
+    padding-bottom : 15px;
+}
+.content_detail_api ul li{
+    list-style: none;
+    color: #666666;
+    padding-right:10px;
+    
+}
+.content_detail_intro{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.content_detail_full{
+    overflow: hidden;
+    display: block;
+    clear: both;
+}
+.content_detail_full p{
+    margin-bottom: 10px;
+}
+.content_detail_full ul{
+    margin-bottom: 10px;
+}
+.content_detail_full ul li{
+    margin-left: 20px;
+}
+.other-news{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px dashed #ccc;
+}
+.list-other-news ul li {
+    background: url("v-arrows.png") no-repeat scroll 0 5px transparent;
+    line-height: 16px;
+    list-style: none outside none;
+    padding-bottom: 5px;
+    padding-left: 12px;
+}

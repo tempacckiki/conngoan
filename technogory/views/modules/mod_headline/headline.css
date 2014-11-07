@@ -1,0 +1,49 @@
+.headline{
+    float: left;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-right: 6px;
+    width: 49%;    
+}
+.headline h3.title-head{
+    font-size: 15px;
+}
+.headline .hl-bot{
+    background: url(bot_headline.png) no-repeat center top;
+    height: 15px;
+}
+.headline .box-headline{
+    background: url(xhtml_bg.png) no-repeat top left;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom : 1px solid #ccc;
+    padding: 10px 5px;
+    min-height: 240px;
+    overflow: hidden;
+}
+.box-headline .box-top{
+    overflow: hidden;
+    margin-bottom: 5px;
+} 
+.box-top h3{
+    font-size: 13px;
+}
+.box-headline .img{
+    width: 150px;
+    height: 110px;
+    display: block;
+    overflow: hidden;
+    margin-right: 5px;
+    float: left;
+    padding-top: 5px;
+}
+.box-headline .img img{
+    width: 150px;
+}
+.box-headline ul li{
+    list-style: none;
+    background: url(v-arrows.png) no-repeat scroll 0px 5px;
+    padding-left: 12px;
+    line-height: 16px;
+    padding-bottom: 5px;
+}

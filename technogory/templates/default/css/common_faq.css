@@ -1,0 +1,164 @@
+/*--- box relative ---*/
+.box-quan-tam-de{
+	clear: both;
+	border: solid 1px #eee;
+	overflow: hidden;
+	background: url("../images/bg-deal-de.png") repeat-y;
+}
+.box-quan-tam-de div.title{
+	clear: both;
+	background: url("../images/bg-tab-index.png") repeat-x;
+	height:30px;
+	overflow: hidden;
+	text-transform: uppercase;
+	line-height: 30px;
+	font-weight: bold;
+	text-indent: 5px;
+	text-shadow: 0px 1px 1px #fff;
+}
+.box-quan-tam-de ul.list-items{
+	clear: both;
+}
+.box-quan-tam-de ul.list-items li{
+	clear: both;
+	overflow: hidden;
+	border-bottom: dotted 1px #eee;
+	padding: 10px 0px;
+}
+.box-quan-tam-de ul.list-items li.row0{
+	background: url("../images/bg-deal-de.png") repeat-y;
+	clear: both;
+	overflow: hidden;
+}
+.box-quan-tam-de ul.list-items li.row1{
+	background: url("../images/bg-deal-de-over.png") repeat-y;
+	clear: both;
+	overflow: hidden;
+}
+
+.box-quan-tam-de ul.list-items li .sub-row{
+	clear: both;
+	width: 235px;
+	margin: auto;
+}
+.box-quan-tam-de ul.list-items li p.img{
+	clear: both;
+	width: 90px;
+	border: solid 1px #eee;
+	float: left;
+	margin-top: 3px;
+}
+.box-quan-tam-de ul.list-items li div.info-deal-de{
+	float: right;
+	width: 138px;
+	overflow: hidden;
+}
+
+.box-quan-tam-de ul.list-items li div.info-deal-de p.description{
+	clear: both;
+	padding-bottom: 5px;
+}
+
+.box-quan-tam-de ul.list-items li div.info-deal-de p.price-old{
+	clear: both;
+	font-weight: bold;
+	text-decoration: line-through;
+	padding-bottom: 5px;
+}
+
+.box-quan-tam-de ul.list-items li div.info-deal-de p.price{
+	clear: both;
+	font-weight: bold;
+	color: #ff0000;
+	font-size: 16px;
+}
+
+.box-quan-tam-de ul.list-items li p.name{
+	clear: both;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.box-quan-tam-de ul.list-items li p.name a{
+	color: #333;
+}
+.box-quan-tam-de ul.list-items li p.name a:hover{
+	color: #ff0000;
+	text-decoration: underline;
+}
+#left-faq{
+	clear: both;
+	float: left;
+	width: 715px;
+	overflow: hidden;
+	margin-top: 10px;
+	padding: 10px;
+	border: solid 1px #eee;
+	margin-bottom: 10px;
+}
+#left-faq div.faq-title{
+	clear: both;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+#left-faq div.faq-content{
+	clear: both;
+	text-align: justify;
+	overflow: hidden;
+	line-height: 1.5em;
+}
+#right-faq{
+	float: right;
+	width: 250px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+div.box-cam-ket-faq{
+	clear: both;
+	border: solid 1px #eee;
+	overflow: hidden;
+	margin-bottom: 5px;
+	padding: 5px;
+	background: #f5f5f5;
+}
+div.box-cam-ket-faq p.title{
+	clear: both;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0px 1px 1px #fff;
+	padding-bottom: 10px;
+}
+div.box-cam-ket-faq ul li{
+	clear: both;
+	overflow: hidden;
+}
+
+div.box-cam-ket-faq ul li.payment{
+	background: url("../images/icon-sView.png")no-repeat 0px -112px;
+	height: 31px;
+	padding-left: 40px;
+	line-height: 31px;
+	margin-bottom: 5px;
+}
+div.box-cam-ket-faq ul li.payment{
+	background: url("../images/icon-sView.png")no-repeat 0px -112px;
+	height: 31px;
+	padding-left: 40px;
+	line-height: 31px;
+	margin-bottom: 5px;
+}
+div.box-cam-ket-faq ul li.shipping{
+	background: url("../images/icon-sView.png")no-repeat 0px -144px;
+	height: 31px;
+	padding-left: 40px;
+	line-height: 31px;
+	margin-bottom: 5px;
+}
+
+div.box-cam-ket-faq ul li.modifier{
+	background: url("../images/icon-sView.png")no-repeat 0px -177px;
+	height: 31px;
+	padding-left: 40px;
+	line-height: 31px;
+	margin-bottom: 5px;
+}

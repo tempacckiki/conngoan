@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+#box-head-wapper{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    display: block;
+    float: right;
+	position:relative;
+    background: url("../images/bg-deal-hot.png")repeat-y;
+}
+#box-head-wapper div.title-hot-head{
+	clear: both;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: left;
+	color: #000;
+	margin-bottom: 7px;
+	height: 20px;
+	overflow: hidden;
+	text-indent: 10px;
+	line-height: 30px;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+#box-head-wapper #topnew_slideshow{
+	width:294px;
+    height: 250px;
+    text-align: center;
+    text-align: center;
+    margin: auto;
+}
+#box-head-wapper #topnew_slideshow div.img-thumb{
+	width:290px;
+    height:220px;
+    overflow: hidden;
+    text-align: center;
+    clear:both;
+    margin: auto;
+    border: solid 1px #fff;   
+    padding: 1px;
+    margin-bottom: 5px;
+	position: relative;
+}
+#box-head-wapper #topnew_slideshow div.img-thumb p.name{
+	clear: both;
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	bottom:0;
+	font-weight: bold;
+	background: #000;
+	opacity:0.7;
+	filter: alpha(opacity=50);
+	overflow: hidden;
+}
+#box-head-wapper #topnew_slideshow div.img-thumb p.name a{
+	color: #ffff00;
+	display: inline-block;
+	padding: 7px 0px;
+}
+#box-head-wapper #topnew_slideshow div.img-thumb p.name a:hover{
+	color: #ffff00;
+	text-decoration: underline;
+}
+
+
+
+#box-head-wapper #topnew_slideshow div.img-thumb h1.name,h2.name,h3.name,h4.name,h5.name,h6.name{
+	clear: both;
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	bottom:0;
+	font-weight: bold;
+	background: #000;
+	opacity:0.7;
+	filter: alpha(opacity=50);
+	font-size: 12px;
+}
+#box-head-wapper #topnew_slideshow div.img-thumb a{
+		color: #ffff00;
+}
+#box-head-wapper #topnew_slideshow div.img-thumb a:hover{
+	text-decoration: underline;
+}
+
+#box-head-wapper #topnew_slideshow  div.box-price {
+	clear:both;
+    overflow: hidden;
+	font-weight: bold;
+	font-size: 14px;
+}
+#box-head-wapper #topnew_slideshow  div.box-price p.price-old {
+	clear: both;
+	padding: 0px 0px 0px;
+    color: #666;
+    font-weight: bold;
+    text-decoration: line-through;
+   	width:100px;
+	overflow: hidden;
+	float: left;
+	text-align: left;
+}
+#box-head-wapper #topnew_slideshow  div.box-price p.price {
+	float: right;
+	width: 100px;
+	overflow: hidden;
+	text-align: right;
+	font-weight: bold;
+	color: #ff0000;
+	text-align: right;
+}
+
+
+#box-head-wapper .next1 {
+    background: url("../images/icon-head.png") no-repeat scroll -176px 0px transparent;
+    top: 5px;
+    cursor: pointer;
+    height: 17px;
+    right: 3px;
+    position: absolute;
+    width: 18px;
+    z-index: 10;
+}
+#box-head-wapper .next1:hover {
+    background: url("../images/icon-head.png") no-repeat scroll -176px 0px transparent;
+}
+#box-head-wapper .pre {
+    background: url("../images/icon-head.png") no-repeat scroll 0 0px transparent;
+    top:5px;
+    cursor: pointer;
+    height: 17px;
+    right: 30px;
+    position: absolute;
+    width: 18px;
+    z-index: 10;
+}
+#box-head-wapper .pre:hover {
+    background: url("../images/icon-head.png") no-repeat scroll 0px 0px transparent;
+}
+
+/*--- cam ket ---*/
+div.note-right{
+	clear: both;
+	width: 100%;
+	margin: auto;
+	padding: 5px 0px;
+	position: relative;
+	margin-top: 3px;
+}
+div.note-right div.sub-note {
+	clear: both;
+	overflow: hidden;
+	width: 298px;
+	margin: auto;
+	float: none;
+	border: solid 1px #ccc;
+	background: url(../images/camket-hot.png) no-repeat 0px 20px;
+	height: 115px;
+}
+
+div.note-right div.kep {
+	clear:both;
+	background: url(../images/stick.png) no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 33px;
+	height: 34px;
+}
+
+div.sub-note div.content {
+	float: right;
+	width: 190px;
+	overflow: hidden;
+	margin-top: 22px;
+	overflow: hidden;
+}
+
+div.sub-note div.content ul.items li {
+	clear: both;
+	overflow: hidden;
+	background: url("../images/icon-sView.png")no-repeat -26px -68px;
+	padding: 2px 0px 2px 0px;
+	text-indent: 9px;
+}

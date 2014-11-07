@@ -1,0 +1,26 @@
+.pop_content{
+    position: fixed;
+    z-index: 1100;
+    display: none;
+
+}
+.pop_content_bg{
+    background: none repeat scroll 0 0 #000000;
+    border: 1px solid #CECECE;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  
+    display: none;
+}
+.pop_content .close{
+    background: url("icon_close_cart.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 30px;
+}

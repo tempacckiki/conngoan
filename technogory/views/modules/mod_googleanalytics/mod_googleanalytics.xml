@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Module Googleanalytics</name>
+    <author>Mytran Group</author>
+    <creationDate>01/06/2011</creationDate>
+    <copyright>www.mytrangroup.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>devmytran@gmail.com</authorEmail>
+    <authorUrl>http://www.mytrangroup.com</authorUrl>
+    <version>1.0</version>
+
+    <params>    
+        <param name="uacct" type="text" default="" label="Uacct" description="" />
+        <param name="trackpage" type="text" default="" label="Trackpage" description="" />    
+    </params>
+</install>

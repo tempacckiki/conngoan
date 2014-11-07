@@ -1,0 +1,26 @@
+table.video{
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin: 0 auto;
+    width: 100%;    
+}
+table.video td.last{
+    padding: 0px;
+    border: 0px solid #E1E1E1;
+    background-color: #F5F5F5;
+}
+table.video tr.row0 td{
+    background-color: #F5F5F5;
+    border: 1px solid #E1E1E1;
+    color: #555555;
+    padding: 3px;
+    line-height: 16px;
+}    
+table.video tr.row1 td{
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    color: #555555;
+    padding: 3px;
+    line-height: 16px;
+} 

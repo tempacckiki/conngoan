@@ -1,0 +1,192 @@
+.wrapper_slider {
+	float:left;
+	background:#c8d6e1 url(../images/loading.gif) no-repeat 50% 50%;
+	height:328px;
+	width:562px;
+	overflow:hidden;
+	border:solid 1px #65c4f8;
+	/*
+	-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	-moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	box-shadow: 0px 1px 5px 0px #4a4a4a; *
+	*/
+	left: 220px;
+	position: relative;
+	margin-top: 5px;
+	
+}
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	z-index: 0;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.nivoSlider div.title-slider{
+	position: absolute;
+	z-index: 100;
+	background: #000;
+	opacity:0.7;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 5px;
+	overflow: hidden;
+}
+.nivoSlider div.title-slider a{
+	color: #ffff00;
+	font-weight: bold;
+}
+.nivoSlider div.title-slider a:hover{
+	text-decoration: underline;
+	color: #fff;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	color: #ffff00;
+	font-weight: bold;
+}
+.nivoSlider a.nivo-imageLink:hover{
+	text-decoration: underline;
+	color: #fff;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+/*	opacity:0.8;  Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+	display:none;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+	display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+.nivoSlider .nivoSlider {
+	position:relative;
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+	/*
+    -webkit-box-shadow: 0px 0px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 0px 5px 0px #4a4a4a;
+    box-shadow: 0px 0px 5px 0px #4a4a4a;
+	*/
+}
+.nivoSlider .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.nivoSlider .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.nivoSlider .nivo-controlNav {
+	position:absolute;
+	right:10px;
+	bottom:0;
+   /*margin-left:-40px;  Tweak this to center bullets */
+	z-index: 1000;
+}
+.nivoSlider .nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(../images/bulletss.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+	color: #ffff00;
+}
+.nivoSlider .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivoSlider .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.nivoSlider a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.nivoSlider a.nivo-prevNav {
+	left:15px;
+}
+
+.nivoSlider .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivoSlider .nivo-caption a {
+    color:#ffff00;
+    border-bottom:1px dotted #fff;
+}
+.nivoSlider .nivo-caption a:hover {
+    color:#fff;
+}
