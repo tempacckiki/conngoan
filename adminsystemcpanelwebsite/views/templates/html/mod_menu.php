@@ -180,6 +180,9 @@
                 <?}?>
                 <li><a href="<?=site_url('quangcao/banner_newspage/listads')?>">Quảng cáo tin tức</a></li>
                 <li><a href="<?=site_url('quangcao/banner_news')?>">Quảng cáo footer</a></li>
+                <li><a href="<?=site_url('quangcao/banner_news/banner1')?>">Quảng cáo banner 1</a></li>
+                <li><a href="<?=site_url('quangcao/banner_news/banner2')?>">Quảng cáo banner 2</a></li>
+                <li><a href="<?=site_url('quangcao/banner_news/banner3')?>">Quảng cáo banner 3</a></li>
                 
                  <!--  
                 <?if($this->permit->get_permit_icon('quangcao/khuyenmai/index')){?>
