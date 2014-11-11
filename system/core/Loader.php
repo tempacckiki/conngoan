@@ -113,7 +113,7 @@ class CI_Loader {
 	 * @param	bool	database connection
 	 * @return	void
 	 */
-	function model($model, $name = '', $db_conn = FALSE)
+	function model($model, $name = '', $db_conn = FALSE, $specificPath = null)
 	{
 		if (is_array($model))
 		{
@@ -161,34 +161,65 @@ class CI_Loader {
 
 		foreach ($this->_ci_model_paths as $mod_path)
 		{
-			if ( ! file_exists($mod_path.'models/'.$path.$model.EXT))
-			{
-				continue;
-			}
-
-			if ($db_conn !== FALSE AND ! class_exists('CI_DB'))
-			{
-				if ($db_conn === TRUE)
+			if($specificPath !== null){
+				if ( ! file_exists($specificPath . $model.EXT))
 				{
-					$db_conn = '';
+					continue;
 				}
 
-				$CI->load->database($db_conn, FALSE, TRUE);
+				if ($db_conn !== FALSE AND ! class_exists('CI_DB'))
+				{
+					if ($db_conn === TRUE)
+					{
+						$db_conn = '';
+					}
+
+					$CI->load->database($db_conn, FALSE, TRUE);
+				}
+
+				if ( ! class_exists('CI_Model'))
+				{
+					load_class('Model', 'core');
+				}
+
+				require_once($specificPath . $model . EXT);
+
+				$model = ucfirst($model);
+
+				$CI->$name = new $model();
+
+				$this->_ci_models[] = $name;
+				return;
+			} else {
+				if ( ! file_exists($mod_path.'models/'.$path.$model.EXT))
+				{
+					continue;
+				}
+
+				if ($db_conn !== FALSE AND ! class_exists('CI_DB'))
+				{
+					if ($db_conn === TRUE)
+					{
+						$db_conn = '';
+					}
+
+					$CI->load->database($db_conn, FALSE, TRUE);
+				}
+
+				if ( ! class_exists('CI_Model'))
+				{
+					load_class('Model', 'core');
+				}
+
+				require_once($mod_path.'models/'.$path.$model.EXT);
+
+				$model = ucfirst($model);
+
+				$CI->$name = new $model();
+
+				$this->_ci_models[] = $name;
+				return;
 			}
-
-			if ( ! class_exists('CI_Model'))
-			{
-				load_class('Model', 'core');
-			}
-
-			require_once($mod_path.'models/'.$path.$model.EXT);
-
-			$model = ucfirst($model);
-
-			$CI->$name = new $model();
-
-			$this->_ci_models[] = $name;
-			return;
 		}
 
 		// couldn't find the model
