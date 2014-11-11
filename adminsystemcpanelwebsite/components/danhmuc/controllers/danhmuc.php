@@ -4,9 +4,13 @@ class danhmuc extends CI_Controller{
     function __construct(){
         parent::__construct();
         $this->load->model('danhmuc_model','danhmuc');
+        $this->load->model('nhomhang_model','nhomhang', false, CODEIGNITER_ADMIN_DIR . 'components/nhomhang/models/');
+
         $this->load->model('vcache_model','vcache');  
         $this->pre_message = "";
         $this->load->helper('file');
+        $this->nhomhang->create_menu();
+
     }
     
     function ds(){

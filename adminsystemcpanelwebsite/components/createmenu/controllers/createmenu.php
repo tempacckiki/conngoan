@@ -45,6 +45,7 @@ class  createmenu extends CI_Controller{
                 }
             }
             $this->session->set_flashdata('message','Lưu dữ liệu thành công');
+            $this->build_menu();
             redirect('createmenu/edit/'.$catid);
         }
         $this->_templates['page'] = 'edit';

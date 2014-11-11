@@ -55,7 +55,7 @@ $(".checkbox").click(function(){
             <?endforeach;?>
         </ul>
     </li>
-    <li>
+    <!-- <li>
         <div>Col 2<input type="hidden" name="ar_id[]" value="2"></div>
         <ul class="page-list">
             <?foreach($list as $val):
@@ -95,6 +95,6 @@ $(".checkbox").click(function(){
             </li>
             <?endforeach;?>
         </ul>
-    </li>
+    </li> -->
 </ul>
 <?=form_close()?>

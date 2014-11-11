@@ -58,6 +58,9 @@ if (defined('ENVIRONMENT'))
  *
  */
 
+	define('CODEIGNITER_DS', DIRECTORY_SEPARATOR);
+	define('CODEIGNITER_DIR', dirname(dirname(__FILE__)) . CODEIGNITER_DS);
+	define('CODEIGNITER_ADMIN_DIR', CODEIGNITER_DIR . 'adminsystemcpanelwebsite' . CODEIGNITER_DS);
     define('ROOT', '../'); 
     define('ROOT_ADMIN', ''); 
     define('ROOT_IMG', getenv("DOCUMENT_ROOT").'/img/');
