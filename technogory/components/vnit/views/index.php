@@ -5,6 +5,30 @@
 	<!-- Group index -->
 	
 	<div class="group-index-box">
+		<div>
+            <div id="conngoan_bannerads2">
+	            <?php
+	                $aBannerAds2 = $this->helper->getBannerAdsByPosition(2);
+	                if(isset($aBannerAds2->id)){
+	                    $img    = base_url_site().'alobuy0862779988/bannerads/banner2/full_images/' . $aBannerAds2->images;
+	            ?>
+	                    <div>
+	                        <a target="_blank" href="<?=$aBannerAds2->link?>"><img src="<?=$img?>" /></a>
+	                    </div>
+	            <?php } ?>
+            </div>
+            <div id="conngoan_bannerads3">
+	            <?php
+	                $aBannerAds3 = $this->helper->getBannerAdsByPosition(3);
+	                if(isset($aBannerAds3->id)){
+	                    $img    = base_url_site().'alobuy0862779988/bannerads/banner3/full_images/' . $aBannerAds3->images;
+	            ?>
+	                    <div>
+	                        <a target="_blank" href="<?=$aBannerAds3->link?>"><img src="<?=$img?>" /></a>
+	                    </div>
+	            <?php } ?>            	
+            </div>
+		</div>
 		<div id="box-left-index">
 			<?php foreach($listtab as $tab): ?>               
 	        	<aside class="col-mid-i">

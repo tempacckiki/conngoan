@@ -23,6 +23,17 @@
                 <?=$this->load->view('templates/default/html/navleft')?>
                 <div class="wrapper_slider"> <!-- box banner -->
                     <?=$this->load->view('templates/default/html/slider')?>
+                    <div id="conngoan_bannerads1">
+                        <?php
+                            $aBannerAds1 = $this->helper->getBannerAdsByPosition(1);
+                            if(isset($aBannerAds1->id)){
+                                $img    = base_url_site().'alobuy0862779988/bannerads/banner1/full_images/' . $aBannerAds1->images;
+                        ?>
+                                <div>
+                                    <a target="_blank" href="<?=$aBannerAds1->link?>"><img src="<?=$img?>" /></a>
+                                </div>
+                        <?php } ?>
+                    </div>
                </div> 
                
                <?=$this->load->view("templates/default/html/box_top");?>
