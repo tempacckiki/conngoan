@@ -160,6 +160,9 @@ if (defined('ENVIRONMENT'))
  * -------------------------------------------------------------------
  */
 	// The name of THIS file
+	define('CODEIGNITER_DS', DIRECTORY_SEPARATOR);
+	define('CODEIGNITER_DIR', dirname(__FILE__) . CODEIGNITER_DS);
+	define('CODEIGNITER_ADMIN_DIR', CODEIGNITER_DIR . 'adminsystemcpanelwebsite' . CODEIGNITER_DS);
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
 	// The PHP file extension
