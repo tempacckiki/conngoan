@@ -1,4 +1,6 @@
 <?php
+require_once (ROOT . 'debug/debug.php');
+
 class banner_news extends CI_Controller{
     protected $_templates;
     function __construct(){
@@ -8,7 +10,7 @@ class banner_news extends CI_Controller{
         $this->load->config('config_news_footer');
         
         //load model
-        $this->load->model("bannertruot_model","banner");
+        $this->load->model("bannerads_model","bannerads_model");
     } 
     
     function index(){
@@ -80,7 +82,203 @@ class banner_news extends CI_Controller{
         $this->_templates['page'] = 'bannernews/index';
         $this->templates->load($this->_templates['page'],$data);
     }
+
+    public function banner1(){
+        $data['title'] = 'Banner 1';
+
+        $this->form_validation->set_rules('link','Link','required');       
+        if($this->form_validation->run() === FALSE){
+            $this->pre_message = validation_errors();
+        }else{
+            $img =  $this->input->post('img');
+            if(!empty($img)){
+                $this->load->helper('img_helper');
+                $imgRoot    = ROOT.'alobuy0862779988/bannerads/banner1/full_images/'.$img;
+                $imgThumb   = ROOT.'alobuy0862779988/bannerads/banner1/thumb/'.$img;
+                vnitResizeImage($imgRoot,$imgThumb,90,90);
+            }   
+            // delete old data
+            $this->bannerads_model->deleteByPosition(1); 
+            // insert new data
+            $aVals = array(
+                'link' => $this->input->post('link'), 
+                'images' => $this->input->post('img'), 
+                'published' => $this->input->post('published'), 
+                'position' => 1, 
+            );
+            $id = $this->bannerads_model->addBanner($aVals);
+        }        
+
+        $aBannerAds = $this->bannerads_model->getBannerByPosition(1);
+        if(isset($aBannerAds->id)){
+            $data['aBannerAds'] = $aBannerAds;
+        }
+
+        $data['message'] = $this->pre_message;
+        $this->_templates['page'] = 'bannernews/banner1';
+        $this->templates->load($this->_templates['page'],$data);
+    }
+
+    public function uploader_banner1(){
+        // $ProductID = $this->uri->segment(3);
+        /// $session_info = $this->session->userdata('session_id');
+        $dir        = ROOT.'alobuy0862779988/bannerads/banner1/full_images/';
+        //chmod($uploaddir,0777);
+        $size=$_FILES['uploadfile']['size'];
+        if($size>204857600)
+        {
+            echo "file_biger";
+            unlink($_FILES['uploadfile']['tmp_name']);
+            //exit;
+        }
+        $filename = stripslashes($_FILES['uploadfile']['name']);
+        $i = strrpos($filename,".");
+        if (!$i) { return ""; }
+        $l = strlen($filename) - $i;
+        $extension = substr($filename,$i+1,$l);
+        $extension = strtolower($extension);
+        $file_name = str_replace($extension,'',$filename);
+        $name = time();
+        $filename = $dir.$name.'.'.$extension;
+        $file_ext = $name.'.'.$extension;
+        if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $filename)) {
+            echo $file_ext;
     
+        } else {
+            echo 'error';
+        }
+    }    
+    
+    public function banner2(){
+        $data['title'] = 'Banner 2';
+
+        $this->form_validation->set_rules('link','Link','required');       
+        if($this->form_validation->run() === FALSE){
+            $this->pre_message = validation_errors();
+        }else{
+            $img =  $this->input->post('img');
+            if(!empty($img)){
+                $this->load->helper('img_helper');
+                $imgRoot    = ROOT.'alobuy0862779988/bannerads/banner2/full_images/'.$img;
+                $imgThumb   = ROOT.'alobuy0862779988/bannerads/banner2/thumb/'.$img;
+                vnitResizeImage($imgRoot,$imgThumb,90,90);
+            }   
+            // delete old data
+            $this->bannerads_model->deleteByPosition(2); 
+            // insert new data
+            $aVals = array(
+                'link' => $this->input->post('link'), 
+                'images' => $this->input->post('img'), 
+                'published' => $this->input->post('published'), 
+                'position' => 2, 
+            );
+            $id = $this->bannerads_model->addBanner($aVals);
+        }        
+
+        $aBannerAds = $this->bannerads_model->getBannerByPosition(2);
+        if(isset($aBannerAds->id)){
+            $data['aBannerAds'] = $aBannerAds;
+        }
+
+        $data['message'] = $this->pre_message;
+        $this->_templates['page'] = 'bannernews/banner2';
+        $this->templates->load($this->_templates['page'],$data);
+    }
+
+    public function uploader_banner2(){
+        // $ProductID = $this->uri->segment(3);
+        /// $session_info = $this->session->userdata('session_id');
+        $dir        = ROOT.'alobuy0862779988/bannerads/banner2/full_images/';
+        //chmod($uploaddir,0777);
+        $size=$_FILES['uploadfile']['size'];
+        if($size>204857600)
+        {
+            echo "file_biger";
+            unlink($_FILES['uploadfile']['tmp_name']);
+            //exit;
+        }
+        $filename = stripslashes($_FILES['uploadfile']['name']);
+        $i = strrpos($filename,".");
+        if (!$i) { return ""; }
+        $l = strlen($filename) - $i;
+        $extension = substr($filename,$i+1,$l);
+        $extension = strtolower($extension);
+        $file_name = str_replace($extension,'',$filename);
+        $name = time();
+        $filename = $dir.$name.'.'.$extension;
+        $file_ext = $name.'.'.$extension;
+        if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $filename)) {
+            echo $file_ext;
+    
+        } else {
+            echo 'error';
+        }
+    }    
    
+    public function banner3(){
+        $data['title'] = 'Banner 3';
+
+        $this->form_validation->set_rules('link','Link','required');       
+        if($this->form_validation->run() === FALSE){
+            $this->pre_message = validation_errors();
+        }else{
+            $img =  $this->input->post('img');
+            if(!empty($img)){
+                $this->load->helper('img_helper');
+                $imgRoot    = ROOT.'alobuy0862779988/bannerads/banner3/full_images/'.$img;
+                $imgThumb   = ROOT.'alobuy0862779988/bannerads/banner3/thumb/'.$img;
+                vnitResizeImage($imgRoot,$imgThumb,90,90);
+            }   
+            // delete old data
+            $this->bannerads_model->deleteByPosition(3); 
+            // insert new data
+            $aVals = array(
+                'link' => $this->input->post('link'), 
+                'images' => $this->input->post('img'), 
+                'published' => $this->input->post('published'), 
+                'position' => 3, 
+            );
+            $id = $this->bannerads_model->addBanner($aVals);
+        }        
+
+        $aBannerAds = $this->bannerads_model->getBannerByPosition(3);
+        if(isset($aBannerAds->id)){
+            $data['aBannerAds'] = $aBannerAds;
+        }
+
+        $data['message'] = $this->pre_message;
+        $this->_templates['page'] = 'bannernews/banner3';
+        $this->templates->load($this->_templates['page'],$data);
+    }
+
+    public function uploader_banner3(){
+        // $ProductID = $this->uri->segment(3);
+        /// $session_info = $this->session->userdata('session_id');
+        $dir        = ROOT.'alobuy0862779988/bannerads/banner3/full_images/';
+        //chmod($uploaddir,0777);
+        $size=$_FILES['uploadfile']['size'];
+        if($size>204857600)
+        {
+            echo "file_biger";
+            unlink($_FILES['uploadfile']['tmp_name']);
+            //exit;
+        }
+        $filename = stripslashes($_FILES['uploadfile']['name']);
+        $i = strrpos($filename,".");
+        if (!$i) { return ""; }
+        $l = strlen($filename) - $i;
+        $extension = substr($filename,$i+1,$l);
+        $extension = strtolower($extension);
+        $file_name = str_replace($extension,'',$filename);
+        $name = time();
+        $filename = $dir.$name.'.'.$extension;
+        $file_ext = $name.'.'.$extension;
+        if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $filename)) {
+            echo $file_ext;
+    
+        } else {
+            echo 'error';
+        }
+    }    
 
 }

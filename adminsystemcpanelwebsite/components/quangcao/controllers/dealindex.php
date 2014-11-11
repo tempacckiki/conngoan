@@ -39,6 +39,10 @@ class dealindex extends CI_Controller{
           		$this->load->helper('img_helper');
           		$imgRoot    = ROOT.'alobuy0862779988/adv/dealindex/full_images/'.$img;
           		$imgThumb   = ROOT.'alobuy0862779988/adv/dealindex/thumb/'.$img;
+                var_dump($img);
+                var_dump($imgRoot);
+                var_dump($imgThumb);
+                die;
           		vnitResizeImage($imgRoot,$imgThumb,90,90);
           	}	
           	$vdata['city_id']	= $this->input->post('city_id');
