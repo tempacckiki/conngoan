@@ -18,7 +18,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'production');
+	define('ENVIRONMENT', 'development');
    
 /*
  *---------------------------------------------------------------
@@ -61,6 +61,7 @@ if (defined('ENVIRONMENT'))
 	define('CODEIGNITER_DS', DIRECTORY_SEPARATOR);
 	define('CODEIGNITER_DIR', dirname(dirname(__FILE__)) . CODEIGNITER_DS);
 	define('CODEIGNITER_ADMIN_DIR', CODEIGNITER_DIR . 'adminsystemcpanelwebsite' . CODEIGNITER_DS);
+	define('CODEIGNITER_FRONTEND_DIR', CODEIGNITER_DIR . 'technogory' . CODEIGNITER_DS);
     define('ROOT', '../'); 
     define('ROOT_ADMIN', ''); 
     define('ROOT_IMG', getenv("DOCUMENT_ROOT").'/img/');
