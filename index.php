@@ -163,6 +163,7 @@ if (defined('ENVIRONMENT'))
 	define('CODEIGNITER_DS', DIRECTORY_SEPARATOR);
 	define('CODEIGNITER_DIR', dirname(__FILE__) . CODEIGNITER_DS);
 	define('CODEIGNITER_ADMIN_DIR', CODEIGNITER_DIR . 'adminsystemcpanelwebsite' . CODEIGNITER_DS);
+	define('CODEIGNITER_FRONTEND_DIR', CODEIGNITER_DIR . 'technogory' . CODEIGNITER_DS);
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
 	// The PHP file extension

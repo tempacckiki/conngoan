@@ -9,6 +9,33 @@
       function __construct(){
           parent::__construct();    
       }
+
+    public function getGlobalSettings(){
+        return $this->db->get('globalsettings')->result();
+    }
+
+    public function deleteGlobalSettings(){
+        $sql = '';
+        $sql .= 'DELETE FROM `globalsettings` WHERE 1=1'
+                ;      
+        $query = $this->db->query($sql);
+
+        return true;
+    }    
+
+    public function addGlobalSettings($data = null){
+      if(null != $data){
+        $aInsert = array(
+            'data' => json_encode($data), 
+        );
+        if($this->db->insert('globalsettings',$aInsert)){
+            return $this->db->insert_id();
+        } else {
+            return false;
+        }
+      }
+    } 
+
       // Lay danh sach nha san xuat theo chuyen muc
       function get_manufacture_by_cat($catid){
           $ar_id = $this->get_ar_manufacture($catid);
@@ -398,6 +425,7 @@
           $sphot                = $this->input->post('sphot');
           $spmoi                = $this->input->post('spmoi');
           $spkhuyenmai          = $this->input->post('spkhuyenmai');
+          $spbanchay          = $this->input->post('spbanchay');
           $baohanh              = $this->input->post('baohanh');
           $deal              	= $this->input->post('deal');
           $phukien              = $this->input->post('phukien');
@@ -422,6 +450,7 @@
           $vidata['sphot']                      = $sphot;
           $vidata['spmoi']                      = $spmoi;
           $vidata['spkhuyenmai']                = $spkhuyenmai;
+          $vidata['spbanchay']                = $spbanchay;
           $vidata['baohanh']                    = $baohanh;
           $vidata['deal']                    = $deal;
  

@@ -5,7 +5,7 @@
 	<div class="sub-box">
 		<ul class="menu-head">
 			<li  <?php echo ($url != 'huong-dan' && $url != 'lien-he')?'class="active"':'';?> ><a href="<?php echo base_url();?>">Home</a></li>
-			<li  <?php echo ($url == 'huong-dan')?'class="active"':'';?> ><a href="<?=site_url('huong-dan/gioi-thieu-alobuy-viet-nam-30');?>">Giới thiệu</a></li>
+			<li  <?php echo ($url == 'huong-dan')?'class="active"':'';?> ><a href="<?=site_url('huong-dan/gioi-thieu-37')?>">Giới thiệu</a></li>
 			<li <?php echo ($url == 'lien-he')?'class="active"':'';?> ><a href="<?=site_url('lien-he');?>">Liên hệ</a></li>
 		</ul>
 <!-- 		<ul class="menu-head">

@@ -89,6 +89,7 @@
                 <?}?>
                 
                  <li><a href="<?=site_url('cat_info/detailnews/ds')?>">Thông tin chuyên mục</a></li>
+                 <li><a href="<?=site_url('product/shop/globalsettings')?>">Thiết lập cho website</a></li>
 				<!-- 
                 <?if($this->permit->get_permit_icon('callme/ds')){?>
                 <li><a href="<?=site_url('callme/ds')?>">Liên hệ tư vấn</a></li>

@@ -5,6 +5,8 @@
 * Email: devmytran@gmail.com
 * Date: 17/06/2011
 ***************************/
+require_once (ROOT . 'debug/debug.php');
+
 class shop extends CI_Controller{
   protected $_templates;
   function __construct(){
@@ -163,6 +165,8 @@ class shop extends CI_Controller{
       $config['uri_segment'] = 6; 
       $this->pagination->initialize($config);   
       $data['list'] =   $this->shop->get_all_product($config['per_page'], $this->uri->segment(6),$catid, $city_id, $barcode, $productkey,$field,$order);
+      // lytk_log_message(ROOT . 'debug/logs/', "error", 'tkly --  -- list -- ' . print_r($data['list'], true));
+
       $data['list_city'] = $this->vdb->find_by_list('city',array('parentid'=>0),array('ordering'=>'asc'));
       $data['pagination']    = $this->pagination->create_links();           
       $data['message'] = $this->pre_message;           
@@ -690,4 +694,32 @@ class shop extends CI_Controller{
         }
         sleep(1);
     } 
+
+    public function globalsettings(){
+        $data['title'] = 'Thiết lập cho webiste';
+
+        $this->form_validation->set_rules('itemcategory','Số lượng sản phẩm hiện thị mỗi category ở trang chủ','required');       
+        if($this->form_validation->run() === FALSE){
+            $this->pre_message = validation_errors();
+        }else{
+            // delete old data
+            $this->shop->deleteGlobalSettings(); 
+            // insert new data
+            $aVals = array(
+                'itemcategory' => $this->input->post('itemcategory'), 
+            );
+            $id = $this->shop->addGlobalSettings($aVals);
+        }
+
+        $aGlobalSetting = $this->shop->getGlobalSettings();        
+        if(count($aGlobalSetting) > 0){
+          $aGlobalSetting = $aGlobalSetting[0];
+          $aGlobalSetting->data = (array)json_decode($aGlobalSetting->data);
+          $data['aGlobalSetting'] = $aGlobalSetting;
+        }
+
+        $data['message'] = $this->pre_message;
+        $this->_templates['page'] = 'products/globalsettings';
+        $this->templates->load($this->_templates['page'],$data);      
+    }
 }

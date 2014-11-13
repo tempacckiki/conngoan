@@ -145,6 +145,7 @@ echo form_open('product/shop/delsproduct',  array('id' => 'admindata'));?>
             <div><input type="checkbox" id="sphot_<?=$rs->productid?>" value="1" <?=($rs->sphot == 1)?'checked="checked"':''?>>Hot</div>
             <div><input type="checkbox" id="spmoi_<?=$rs->productid?>" value="1" <?=($rs->spmoi == 1)?'checked="checked"':''?>>New</div>
             <div><input type="checkbox" id="spkhuyenmai_<?=$rs->productid?>" value="1" <?=($rs->spkhuyenmai == 1)?'checked="checked"':''?>>Khuyến mãi</div>
+            <div><input type="checkbox" id="spbanchay_<?=$rs->productid?>" value="1" <?=($rs->spbanchay == 1)?'checked="checked"':''?>>Bán chạy</div>
         </td>
         <td><?=$rs->productname?></td>
          <?php    

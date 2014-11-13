@@ -18,6 +18,7 @@ $config['base_url']    			= '';
 $config['base_url_img']    		= 'http://local.dev/alobuyvn/';
 $config['base_url_avatar']    	= 'http://local.dev/alobuyvn/';
 $config['base_url_static']    	= 'http://local.dev/alobuyvn/';
+$config['base_url_site']    	= 'http://local.dev/alobuyvn/';
 /*
 |--------------------------------------------------------------------------
 | Index File

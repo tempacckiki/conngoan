@@ -191,6 +191,7 @@ $(document).ready(function(){
                     Hot<input type="checkbox" name="sphot" value="1"> 
                     Mới<input type="checkbox" name="spmoi" value="1"> 
                     Khuyến mãi<input type="checkbox" name="spkhuyenmai" value="1"> 
+                    Bán chạy<input type="checkbox" name="spbanchay" value="1"> 
                 </td>
             </tr>
             <tr>

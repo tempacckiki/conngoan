@@ -1,4 +1,6 @@
 <?php
+require_once (ROOT . 'debug/debug.php');
+
 class nhomhang extends CI_Controller{
     protected $_templates;
     function __construct(){
@@ -90,6 +92,8 @@ class nhomhang extends CI_Controller{
     // Cap nhat nhom hang
     
     function edit(){
+        // lytk_log_message(ROOT . 'debug/logs/', "error", 'tkly -- edit --  -- ' . print_r('aaa', true));
+
         $data['title'] = 'Cập nhật nhóm hàng';
         $data['apply'] = true;
         $data['save'] = true;                
@@ -115,10 +119,11 @@ class nhomhang extends CI_Controller{
             $published = $this->input->post('published');
             $vmenu['ordercat'] = $cat['ordering'];
             
+
             if($_FILES["userfile"]["size"] > 0){
-                $config['upload_path'] = ROOT.'data/img_cat/';
-                $config['allowed_types'] = 'gif|jpg|png|swf';
-                $config['max_size']    = '10000';
+                $config['upload_path'] = ROOT.'alobuy0862779988/0862779988cat/';
+                $config['allowed_types'] = 'gif|jpeg|jpg|png|swf';
+                $config['max_size']    = 1 * 1024 *1024;
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);                     
                        
@@ -127,10 +132,12 @@ class nhomhang extends CI_Controller{
                 }else{                         
                     $result =  $this->upload->data();
                     $img_main = $result['file_name'];               
+
                 }                    
             }else{
                 $img_main = $this->input->post('img_main');
             }
+
             
             $this->vdb->update('built_menu',$vmenu,array('maincat'=>$id));
             // DB lang Vi
