@@ -134,9 +134,9 @@ function chosen_tmpl(img){
 // Xóa ảnh Ratore
 
 function del_ratore_tmpl(idimg){
-    $.post(base_url+"product/shop/del_ratore_tmpl",{'idimg':idimg},function(data){
+    // $.post(base_url+"product/shop/del_ratore_tmpl",{'idimg':idimg},function(data){
        $("ul#list_img_rotare li#ratore_"+idimg).remove();
-    },'json'); 
+    // },'json'); 
 }
 $(document).ready(function() { 
     $(".del_img_add").live("click", function(){

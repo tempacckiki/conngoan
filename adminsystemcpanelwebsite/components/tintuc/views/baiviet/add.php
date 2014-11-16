@@ -59,7 +59,7 @@
 							<!-- hien thi hình -->
 							<div class="upload-img" id="imgBody">
 								<?php
-								$img	= base_url_site().'site/templates/fyi/images/no_image.gif';
+								$img	= base_url_site().'technogory/templates/default/images/no_image.gif';
 								?>
 								<img src="<?=$img?>" width="85"><br>
 								<input type="hidden" value="" name="img"> 

@@ -3,62 +3,16 @@ $imgPath   		= base_url().'technogory/templates/default/images/';
 $uriCatID		= end(explode('-', $this->uri->segment('2')));
 $uri3			= (int)$this->uri->segment('3');
 ?>
-<?php if(file_exists(ROOT.'technogory/cache/cat/hot_'.$uriCatID.'city_'.$this->session->userdata('city_site').'.db')){ ?>
-<div class="group-cat-project">
-			<script type="text/javascript" src="<?=base_url_static()?>technogory/templates/default/js/jquery.easing.js?v=alobuy.vn" charset="UTF-8"></script>
-			<script type="text/javascript" src="<?=base_url_static()?>technogory/templates/default/js/caroufredsel.js?v=alobuy.vn" charset="UTF-8"></script>
-			<link type="text/css" rel="stylesheet" href="<?=base_url_static()?>technogory/templates/default/css/tabscroll_cat.css?v=alobuy.vn" media="screen" />
-			<script type="text/javascript">				
-				//****************************
-				$(function() {
-					$('ul#mod_hethong').carouFredSel({
-						auto: true,
-						prev: "#prev_ht",
-						width : 790,
-						visible : 10,
-						items: 3,
-						duration : 1000,
-						start: 0,
-						next: "#next_ht"
-						});
-					});
-			</script>
-			<div class="image_hethong">			
-			<script type="text/javascript">
-					$(document).ready(function(){					
-						//** hover
-						$("#mod_hethong li div.box-info-index").hover(function(){
-							$(this).find('.buttom-buy').css({
-								 'display': 'block'
-							});
-						},function(){
-							$(this).find('.buttom-buy').css({
-								'display': 'none'
-							});
-						});
-	
-						
-					});
-				</script>	
-				<ul id="mod_hethong" style="width: 100%;">
-				<?php if(file_exists(ROOT.'technogory/cache/cat/hot_'.$uriCatID.'city_'.$this->session->userdata('city_site').'.db')){
-	           		require_once(ROOT.'technogory/cache/cat/hot_'.$uriCatID.'city_'.$this->session->userdata('city_site').'.db'); 
-	            }?>
-	            </ul>   
-				
-				<div class="clearfix"></div>
-				<a id="prev_ht" class="prev" href="#"></a>
-				<a id="next_ht" class="next" href="#"></a>
-			</div>			
-							
-							
-</div>	
-<?php }?>	
-<?php if(file_exists(ROOT.'technogory/cache/products/'.$uriCatID.'_product_'.$this->city_id.'.db')){?>
+
+
+<?php if(count($aProducts) > 0) {
+		$base_url_static = $this->config->item('base_url_static');
+		$base_url_site = $this->config->item('base_url_site');
+?>
 <div id="vnit_page_cat">
     <div class="head-order-cat">
     	<h2 class="cat-head">Tìm thấy <?=$num?> sản phẩm <?=$catinfo->catname;?></h2>
-        <ul class="ordering">  
+<!--         <ul class="ordering">  
         	         
             <li class="fr">
             	Giá: 
@@ -78,19 +32,64 @@ $uri3			= (int)$this->uri->segment('3');
                     <option value="promotion">Sản phẩm khuyến mãi</option>
                 </select>
             </li>
-        </ul>
+        </ul> -->
     </div>
-    
-  
-    
-    <?php    	
-	   if($uri3 != 0){
-			echo $cacheFilePage;
-		}else{
-			echo $cacheFile;
-		}
-    ?>
-  	
+
+    <div>
+		<ul>
+			<?php
+				foreach ($aProducts as $key => $aProduct) {
+					$tangpham 		= addli($aProduct->phukien);
+			        $productid  	= $aProduct->productid;
+			        $productname 	= $aProduct->productname;
+			        $producturl 	= $aProduct->producturl;
+			        $aImg = $this->helper->getProductImageByProductId($productid);
+			        if(count($aImg) > 0){
+			            $productimg 	= $base_url_static.'alobuy0862779988/0862779988product/190/' . $aImg[0]->imagepath;
+			        } else {
+			            $productimg 	= $imgPath . 'no_image.gif';
+			        }
+			        $giathitruong 	= number_format($aProduct->giathitruong,0,'.','.');
+			        $phantram 		= $aProduct->phantram .' %';
+			        $giaban 		= number_format($aProduct->giaban,0,'.','.');
+			?>
+					<li>
+						<div>
+							<div class="div-info">
+								<div>
+			                        <a title="<?=$productname?>" href="<?=$base_url_site.'san-pham/'.$producturl.'-'.$productid?>.html">
+			                            <img height="190" src="<?=$imgPath?>placeholder.gif" data-original="<?=$productimg?>"  alt="<?=$productname?>">
+			                        </a>
+								</div>
+								<div><a title="<?=$productname?>" href="<?=$base_url_site.'san-pham/'.$producturl.'-'.$productid?>.html"><?=$productname?></a></div>
+								<div><span><?=$aProduct->barcode?></div>
+								<div><span><?=$giaban?> ₫</div>
+							<?php
+								if((double)$aProduct->phantram > 0){
+							?>
+									<div><span><?=$giathitruong?> ₫</div>
+							<?php
+								}
+							?>
+							</div>
+							<?php
+								if((double)$aProduct->phantram > 0){
+							?>
+									<div class="discount">-<?=$phantram?></div>
+							<?php
+								} else if($aProduct->sphot) {
+							?>
+									<div class="discount">HOT</div>
+							<?php		
+								}
+							?>
+						</div>
+					</li>
+			<?php
+				}
+			?>
+		</ul>
+    </div>
     
     <div class="clear"></div>
     <div class="div_page pages" style="padding: 0px;"><?=$pagination?></div>
@@ -99,20 +98,11 @@ $uri3			= (int)$this->uri->segment('3');
 
 <?}else{?>
 <div class="infomation-show">
-	<div class="photo-not-found">
-		<img src="<?=$imgPath;?>not-found.jpg"  height="200" alt="">
-	</div>
-	
-	<div class="text-infomation">
-		<p class="title">Thông báo:</p>
-		- Dữ liệu đang cập nhật. Xin vui lòng quay trở lại sau cảm ơn!......<br>
-	 	- Sử dụng chức năng tìm kiếm để tìm thông tin bạn cần.<br>
-		- Nếu bạn chắc chắn đây là lỗi, hãy liên hệ chúng tôi để hoàn thiện hơn.
-	</div>
-	
-	
+	<span>Không tìm thấy sản phẩm.</span>
 </div>
 <?php }?>
+
+<?=$this->load->view("templates/default/html/otherblocks");?>
 
 <script type="text/javascript">
 	$(document).ready(function(){

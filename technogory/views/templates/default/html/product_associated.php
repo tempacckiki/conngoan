@@ -11,7 +11,7 @@
 ?>
 
 <div class="box-left-content">
-<p class="title"><span>&nbsp;</span>Chuyên mục sản phẩm</p>
+<p class="title"><span>&nbsp;</span>Danh mục</p>
 <div class="box-m">
 	<ul class="sub-left-items">
 	<?foreach($list as $rs):

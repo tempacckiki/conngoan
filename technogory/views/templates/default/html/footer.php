@@ -3,6 +3,17 @@ $imgPath   = base_url_static().'technogory/templates/default/images/';
 
 ?>
 <footer> <!-- BEGIN footer-->
+	<div>
+		<div></div>
+		<div>
+			<div><span>ĐĂNG KÝ NHẬN</span> <span>TIN KHUYẾN MÃI VÀ QUÀ TẶNG</span></div>
+			<div>Thông tin của bạn được giữ kín tuyệt đối và có thể hủy đăng ký bất cứ lúc nào</div>
+		</div>
+		<div>
+			<div><input type="text" id="congnoan_subscribe_email" placeholder="Nhập địa chỉ email của bạn để đăng ký" /></div>
+			<div><input type="button" id="congnoan_subscribe_register" value="Đăng ký" /></div>
+		</div>
+	</div>
     <section class="group-support-f">
         <div class="sub-group-suport">
 			<aside class="col-items">  <!-- info company -->
@@ -30,12 +41,71 @@ $imgPath   = base_url_static().'technogory/templates/default/images/';
             <aside class="item-next-f">
                 <p class="title">Kết nối với Con Ngoan</p>
 				<ul class="sub-f-items">
-                	<li class="no-bg"><a href="http://www.facebook.com/www.alobuy.vn?ref=hl" target="_blank"><img src="<?=$imgPath;?>footer-social-fb.png" align="middle"> Facebook</a></li>
+					<?php
+						$aGlobalSetting = $this->helper->getGlobalSettings();
+						if(count($aGlobalSetting) > 0){
+							$aGlobalSetting = $aGlobalSetting[0];
+						} else {
+							$aGlobalSetting = null;
+						}
+						$aGlobalSetting->data = (array)json_decode($aGlobalSetting->data);
+
+						if(null != $aGlobalSetting){
+					?>
+							<?php
+								if(strlen(trim($aGlobalSetting->data['linkfacebook'])) > 0){
+							?>
+			                	<li class="no-bg"><a href="<?=$aGlobalSetting->data['linkfacebook'];?>" target="_blank"><img src="<?=$imgPath;?>footer-social-fb.png" align="middle"> Facebook</a></li>
+							<?php	
+								}
+							?>
+							<?php
+								if(strlen(trim($aGlobalSetting->data['linkgoogleplus'])) > 0){
+							?>
+			                	<li class="no-bg"><a href="<?=$aGlobalSetting->data['linkgoogleplus'];?>" target="_blank"><img src="<?=$imgPath;?>footer-social-google.png" align="middle"> Google +</a></li>
+							<?php	
+								}
+							?>
+							<?php
+								if(strlen(trim($aGlobalSetting->data['linkyoutube'])) > 0){
+							?>
+			                	<li class="no-bg"><a href="<?=$aGlobalSetting->data['linkyoutube'];?>" target="_blank"><img src="<?=$imgPath;?>footer-social-youtube.png" align="middle"> YouTube</a></li>
+							<?php	
+								}
+							?>
+							<?php
+								if(strlen(trim($aGlobalSetting->data['accountskype'])) > 0){
+							?>
+			                	<li class="no-bg">
+				                	<a href="skype:<?=$aGlobalSetting->data['accountskype'];?>?chat">
+										<img src="http://mystatus.skype.com/smallclassic/<?=$aGlobalSetting->data['accountskype'];?>" width="114" height="20" />
+									</a>
+		                		</li>
+							<?php	
+								}
+							?>
+							<?php
+								if(strlen(trim($aGlobalSetting->data['accountyahoo'])) > 0){
+							?>
+			                	<li class="no-bg">
+									<a href="ymsgr:sendIM?<?=$aGlobalSetting->data['accountyahoo'];?>&m=Hello">
+										<img src="http://opi.yahoo.com/online?u=<?=$aGlobalSetting->data['accountyahoo'];?>&t=1" border="0" />
+									</a>
+		                		</li>
+							<?php	
+								}
+							?>
+					<?php
+						}
+					?>
                 	              	
 <!--                 	<li class="no-bg"><a href=""><img src="<?=$imgPath;?>footer-social-zingme.png" align="middle"> ZingMe</a></li>
                 	<li class="no-bg"><a href=""><img src="<?=$imgPath;?>footer-social-twitter.png" align="middle"> Twitter</a></li>
                 	<li class="no-bg"><a href=""><img src="<?=$imgPath;?>footer-social-youtube.png" align="middle"> Youtube</a></li>
  -->                </ul>
+            </aside>
+            <aside class="item-next-f">
+            	
             </aside>
             
 <!--              <aside class="item-next-f">
@@ -191,4 +261,29 @@ if(file_exists(ROOT.'technogory/config/home/bannertruot'.$city_id.'.db')){
 	   
 	});
 	</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#congnoan_subscribe_register').click(function(){
+		if($('#congnoan_subscribe_email').val().length > 0){
+		    $.ajax({
+		        type: "POST",
+		        url: '<?=$this->config->item('base_url_site');?>' + 'api/subscriptions',
+		        data: {
+			        email: $('#congnoan_subscribe_email').val(), 
+		        }, 
+		        success: function(data) {
+	          		var oOutput = jQuery.parseJSON(data);
+	          		if(oOutput.error == 0){
+	          			$('#congnoan_subscribe_email').val('');
+	          		}
+		            jAlert(oOutput.msg,'Thông báo');
+		        }
+		    });		
+		} else {
+			jAlert('Vui lòng nhập email của bạn để đăng ký','Thông báo');
+		}
+	});
+});	
+</script>
   

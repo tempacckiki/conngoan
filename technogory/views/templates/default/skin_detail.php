@@ -63,6 +63,10 @@
 	        echo '<div class="show_notice" id="msg">'.$this->session->flashdata('notes').'</div>';
 	    }
 	    ?> 
+	    <?php
+	    	// echo $this->router->fetch_class();
+	    	// die;
+	    ?>
 	    <?=$this->load->view($page)?>    
 	</div>
     <?=$this->load->view('templates/default/html/footer')?>     

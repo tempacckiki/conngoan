@@ -8,6 +8,114 @@ class vnit_model extends CI_Model{
 
     }
 
+    public function getContactSite(){
+        return $this->db->get('contact')->result();
+    }
+
+    public function getProductByProductIds($aProductIds, $iLimit = null){
+        $result = array();
+        $sProductIds = implode(',', $aProductIds);
+        $sProductIds = trim($sProductIds, ',');
+
+        $limit = 4;
+        if(null != $iLimit){
+            $limit = $iLimit;
+        }
+        $aGlobalSetting = $this->helper->getGlobalSettings();
+        if(count($aGlobalSetting) > 0){
+          $aGlobalSetting = $aGlobalSetting[0];
+          $aGlobalSetting->data = (array)json_decode($aGlobalSetting->data);
+          $limit = $aGlobalSetting->data['itemcategory'];
+        }
+
+        $sql = '';
+        $sql .= " SELECT shop_product.productid, shop_product.barcode, shop_product.sphot
+                    , shop_product.productimg, shop_product.tinhnang, shop_product.productname,shop_product.phukien,shop_product.producturl, shop_product.manufactureid, shop_price.* "
+                . " FROM `shop_product` AS shop_product "
+                . " JOIN shop_price AS shop_price ON (shop_price.productid = shop_product.productid) "
+                . " WHERE 1=1 "
+                    . " AND shop_product.productid IN (" . $sProductIds . ") "
+                    . " AND shop_product.published = 1 "
+                . " ORDER BY shop_product.productid DESC "
+                . " LIMIT 0 , {$limit} "
+                ;
+
+        $query = $this->db->query($sql);
+        if ($this->db->_error_number() > 0) {
+            return array();
+        }
+
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $result[] = $row;
+            }
+        }
+
+        $query->free_result();
+
+        return $result;
+    }
+
+    public function getLatestNews($count = 5){
+        $result = array();
+        $sWhere = '';
+        $limit = $count;
+        $sql = '';
+        $sql .= " SELECT news_detail.* "
+                . '  FROM news_detail AS news_detail 
+                     WHERE 1=1 '
+                . " ORDER BY news_detail.newsid DESC "
+                . " LIMIT 0 , {$limit} "
+                ;
+
+        $query = $this->db->query($sql);
+        if ($this->db->_error_number() > 0) {
+            return array();
+        }
+
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $result[] = $row;
+            }
+        }
+
+        $query->free_result();
+
+        return $result;   
+    }
+
+    public function getRandomNews(){
+        $result = array();
+        $sWhere = '';
+        $limit = 5;
+        $sql = '';
+        $sql .= " SELECT news_detail.* "
+                . '  FROM news_detail AS news_detail JOIN
+                           (SELECT CEIL(RAND() *
+                                         (SELECT MAX(newsid)
+                                            FROM news_detail)) AS newsid)
+                            AS r2
+                     WHERE news_detail.newsid >= r2.newsid'
+                . " ORDER BY news_detail.newsid DESC "
+                . " LIMIT 0 , {$limit} "
+                ;
+
+        $query = $this->db->query($sql);
+        if ($this->db->_error_number() > 0) {
+            return array();
+        }
+
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $result[] = $row;
+            }
+        }
+
+        $query->free_result();
+
+        return $result;        
+    }
+
     public function getRandomOffsetProduct(){
         $result = array();
         $sql = '';
@@ -26,10 +134,13 @@ class vnit_model extends CI_Model{
         return $result;
     }
 
-    public function getRandomProduct(){
+    public function getRandomProduct($iLimit = null){
         $result = array();
         $sWhere = '';
         $limit = 5;
+        if(null != $iLimit){
+            $limit = $iLimit;
+        }
         $sql = '';
         $sql .= " SELECT shop_product.productid, shop_product.barcode, shop_product.sphot
                     , shop_product.productimg, shop_product.tinhnang, shop_product.productname,shop_product.phukien,shop_product.producturl, shop_product.manufactureid, shop_price.* "
@@ -43,7 +154,6 @@ class vnit_model extends CI_Model{
                 . " ORDER BY shop_product.productid DESC "
                 . " LIMIT 0 , {$limit} "
                 ;
-                lytk_log_message(ROOT . 'debug/logs/', "error", 'tkly --  -- $sql -- ' . print_r($sql, true));
 
         $query = $this->db->query($sql);
         if ($this->db->_error_number() > 0) {

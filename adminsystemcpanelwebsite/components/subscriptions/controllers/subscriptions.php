@@ -19,4 +19,19 @@ class subscriptions extends CI_Controller{
         $this->_templates['page'] = 'index';
         $this->templates->load($this->_templates['page'],$data);
     }
+
+    public function exportall(){
+        $list = $this->subscriptions->getAllEmailSubscription();
+        $content = '';
+        foreach ($list as $key => $value) {
+            $content .= $value->email . ',';
+        }
+        $content = trim($content, ',');
+        header("Content-type: text/plain");
+       header("Content-Disposition: attachment; filename=list_email.txt");
+
+       // do your Db stuff here to get the content into $content
+       // print "This is some text...\n";
+       print $content;        
+    }
 }

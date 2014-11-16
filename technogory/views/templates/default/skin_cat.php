@@ -34,33 +34,41 @@
     </header>
     
     <div class="box-content-wapper">
-    	<div class="bg-title-main">    
-			<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=base_url()?>" itemprop="url" class="no-bg"><span itemprop="title">Trang chủ</span></a></div>
-		    <?=$top_link?> 		    
-		</div>
-
-	    <div class="cat-content">
-		    <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'</div>';}?>
-		    <?if($this->session->flashdata('message')){
-		        echo '<div class="show_success" id="msg">'.$this->session->flashdata('message').'</div>';
-		    }if($this->session->flashdata('error')){
-		        echo '<div class="show_error" id="msg">'.$this->session->flashdata('error').'</div>';
-		    }if($this->session->flashdata('notes')){
-		        echo '<div class="show_notice" id="msg">'.$this->session->flashdata('notes').'</div>';
-		    }
-		    ?> 
-		    
-		    <?=$this->load->view($page)?>    
-	    </div>
-        
-        <div class="cat-left">
-	        <?if($this->uri->segment(1) == 'chuyen-muc' || $this->uri->segment(1) == 'hang-san-xuat'){?>
-	        <?php $this->load->view('templates/default/html/product_associated');?>
-	        <?php $this->load->view('templates/default/html/features');?>
-	        <?php $this->load->view('templates/default/html/banner_left');?>
-	        <?}?>
-	    </div>
-    
+        <div>
+            <div class="cat-left">
+                <?if($this->uri->segment(1) == 'chuyen-muc' || $this->uri->segment(1) == 'hang-san-xuat'){?>
+                <?php $this->load->view('templates/default/html/product_associated');?>
+                <?php $this->load->view('templates/default/html/features');?>
+                <?php $this->load->view('templates/default/html/banner_left');?>
+                <?}?>
+            </div>
+            <div class="bg-title-main">    
+                <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=base_url()?>" itemprop="url" class="no-bg"><span itemprop="title">Trang chủ</span></a></div>
+                <?=$top_link?>          
+            </div>
+        </div>
+        <div>
+            <div class="cat-content">
+                <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'</div>';}?>
+                <?if($this->session->flashdata('message')){
+                    echo '<div class="show_success" id="msg">'.$this->session->flashdata('message').'</div>';
+                }if($this->session->flashdata('error')){
+                    echo '<div class="show_error" id="msg">'.$this->session->flashdata('error').'</div>';
+                }if($this->session->flashdata('notes')){
+                    echo '<div class="show_notice" id="msg">'.$this->session->flashdata('notes').'</div>';
+                }
+                ?> 
+                <?=$this->load->view($page)?>    
+            </div>
+            <div>
+                <div>
+                   <?=$this->load->view("templates/default/html/box_top");?>
+                </div>
+                <div>
+                   <?=$this->load->view("templates/default/html/randomproduct");?>
+                </div>
+            </div>
+        </div>
     </div>
     <?=$this->load->view('templates/default/html/footer')?>     
 </div> <!-- End #wapper -->

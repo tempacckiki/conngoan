@@ -81,6 +81,25 @@
           //load templates  ************************************
           $this->_templates['page']     ='detail';
           $this->templates->load($this->_templates['page'],$data,'detail');
+
+          // update viewed product
+          $sViewedProductIds = $this->session->userdata('sViewedProductIds');
+          if(false === $sViewedProductIds){
+            // do nothing
+            $sViewedProductIds = '';
+          }
+          $sViewedProductIds = trim($sViewedProductIds, ',');
+          $aViewedProductIds = explode(',', $sViewedProductIds);
+          $isAdd = true;
+          foreach ($aViewedProductIds as $key => $value) {
+            if($value == $productid ){
+              $isAdd = false;
+            }
+          }
+          if($isAdd){
+            $sViewedProductIds .= ',' . $productid;
+            $this->session->set_userdata('sViewedProductIds', $sViewedProductIds);
+          }
       }
       
       //**8 get district *****************
@@ -126,9 +145,18 @@
           $this->load->view($this->_templates['page'],$data);
       }
       
-      // Search Result
-      
 
+  public function listhuudung(){
+    $this->_templates['page']     ='huudung';
+    $this->templates->load($this->_templates['page'],$data, 'detail');
+
+  }      
+
+  public function listdaxem(){
+    $this->_templates['page']     ='daxem';
+    $this->templates->load($this->_templates['page'],$data, 'detail');
+
+  }      
       
 
   }

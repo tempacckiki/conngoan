@@ -707,6 +707,11 @@ class shop extends CI_Controller{
             // insert new data
             $aVals = array(
                 'itemcategory' => $this->input->post('itemcategory'), 
+                'linkfacebook' => $this->input->post('linkfacebook'), 
+                'linkgoogleplus' => $this->input->post('linkgoogleplus'), 
+                'linkyoutube' => $this->input->post('linkyoutube'), 
+                'accountskype' => $this->input->post('accountskype'), 
+                'accountyahoo' => $this->input->post('accountyahoo'), 
             );
             $id = $this->shop->addGlobalSettings($aVals);
         }

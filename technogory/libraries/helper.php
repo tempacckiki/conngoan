@@ -53,8 +53,27 @@ class helper {
         return $this->CI->vnit_model->getProductByStatus($status);
     }
 
-    public function getRandomProduct(){
-        return $this->CI->vnit_model->getRandomProduct();
+    public function getRandomProduct($iLimit = null){
+        return $this->CI->vnit_model->getRandomProduct($iLimit);
     }
 
+    public function getRandomNews(){
+        return $this->CI->vnit_model->getRandomNews();
+    }
+
+    public function getContactSite(){
+        return $this->CI->vnit_model->getContactSite();
+    }
+
+    public function getLatestNews($count){
+        return $this->CI->vnit_model->getLatestNews($count);
+    }
+
+    public function getProductByProductIds($aProductIds, $iLimit = null){
+        return $this->CI->vnit_model->getProductByProductIds($aProductIds, $iLimit);
+    }
+
+    public function formatDatetime($timestamp, $format = 'H:i:s d-m-Y'){
+        return date($format, $timestamp);
+    }
 }

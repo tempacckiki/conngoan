@@ -78,7 +78,7 @@
                 <div><?=$productname?></div>
                 <div>
                     <a title="<?=$productname?>" href="<?=$base_url_site.'san-pham/'.$producturl.'-'.$productid?>.html">
-                        <img height="190" src="<?=$imgPath?>placeholder.gif" data-original="<?=$productimg?>"  alt="<?=$productname?>">
+                        <img height="190" src="<?=$productimg?>" data-original="<?=$productimg?>"  alt="<?=$productname?>">
                     </a>                    
                 </div>
                 <div>
@@ -115,7 +115,7 @@
         $base_url_site = $this->config->item('base_url_site');
 ?>
     <div id="box-head-wapper">
-        <div>SẢN PHẨM NỔI BẬT</div>  
+        <div>SAN PHAM BAN CHAY</div>  
         <div id="spbanchay_slideshow">
         <?php
             foreach ($aBanChayProducts as $key => $aProduct) {
@@ -136,7 +136,7 @@
                 <div><?=$productname?></div>
                 <div>
                     <a title="<?=$productname?>" href="<?=$base_url_site.'san-pham/'.$producturl.'-'.$productid?>.html">
-                        <img height="190" src="<?=$imgPath?>placeholder.gif" data-original="<?=$productimg?>"  alt="<?=$productname?>">
+                        <img height="190" src="<?=$productimg?>" data-original="<?=$productimg?>"  alt="<?=$productname?>">
                     </a>                    
                 </div>
                 <div>

@@ -1,4 +1,6 @@
 <?php
+require_once (CODEIGNITER_DIR . 'debug/debug.php');
+
 class category extends CI_Controller{
     protected $_templates;
     function __construct(){
@@ -71,9 +73,14 @@ class category extends CI_Controller{
         $config['uri_segment'] 		=  3;
         $this->pagination->initialize($config);
        
+       // get products by catid
+       $aProducts = $this->category->get_all_product($config['per_page'],(int)$this->uri->segment('3'),$catid, $max, $min, $hot='all',$order='price_asc');
+       $data["aProducts"] = $aProducts;
+		$data['num']        = count($aProducts);
         //phan product cache        
 	    $strOptions = '';
 	    $fileProduct 	 = ROOT."technogory/cache/products/".$catinfo->catid."_"."product_".$this->city_id.".db" ;
+
 	    	
 	   if(file_exists($fileProduct) && ($this->uri3 ==0)){	   	
 	    	$data["cacheFile"] = @file_get_contents($fileProduct);

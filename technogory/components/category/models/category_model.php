@@ -13,7 +13,7 @@ class category_model extends CI_Model{
     
     	$sql = "
 	    	SELECT
-	    	pro.productid, pro.catid, pro.productname, pro.producturl, pro.tinhnang, pro.productimg, pro.manufactureid, pro.tinhnang,pro.phukien, pro.sphot,shop_price.*
+	    	pro.productid, pro.barcode, pro.spbanchay, pro.catid, pro.productname, pro.producturl, pro.tinhnang, pro.productimg, pro.manufactureid, pro.tinhnang,pro.phukien, pro.sphot,shop_price.*
 	    	FROM
 	    	shop_product as pro LEFT JOIN shop_features_values as f ON pro.productid = f.product_id JOIN shop_price ON pro.productid = shop_price.productid
 	    	WHERE

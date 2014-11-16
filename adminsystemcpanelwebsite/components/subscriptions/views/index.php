@@ -1,4 +1,5 @@
 <?php echo form_open('tintuc/dels',  array('id' => 'admindata'));?> 
+<div><a href="<?=site_url() . 'subscriptions/exportall';?>" target="_blank">Export All</a></div>
 <table class="admindata">
     <thead>
         <tr>
@@ -7,7 +8,7 @@
             </th>
         </tr>
         <tr>
-            <th class="checkbox"><input type="checkbox" name="sa" id="sa" onclick="check_chose('sa', 'ar_id[]', 'admindata')"></th>
+            <!-- <th class="checkbox"><input type="checkbox" name="sa" id="sa" onclick="check_chose('sa', 'ar_id[]', 'admindata')"></th> -->
             <th class="id">ID</th>
             <th>Email</th>
         </tr>        
@@ -17,7 +18,7 @@
     foreach($list as $rs):
     ?>
     <tr class="row<?=$k?>">
-        <td align="center"><input  type="checkbox" name="ar_id[]" value="<?php echo $rs->id?>"></td>
+        <!-- <td align="center"><input  type="checkbox" name="ar_id[]" value="<?php echo $rs->id?>"></td> -->
         <td><?=$rs->id?></td>
         <td><?=$rs->email?></td>
     </tr>       

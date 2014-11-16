@@ -34,22 +34,38 @@
         <?=$this->load->view('templates/default/html/header')?>
     </header> <!-- End box banner --> 
     <div class="box-content-wapper">
-    	<div class="bg-title-main">    
-			<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=base_url()?>" itemprop="url" class="no-bg"><span itemprop="title">Trang chủ</span></a></div>
-		    <?=$top_link?> 
-		    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=$top_link_seo;?>" itemprop="url"><span itemprop="title"><strong><?=$title;?></strong></span></a></div>
-		</div>
+        <div>
+            <div class="cat-left">
+                <span>Danh mục</span>
+            </div>
+            <div class="bg-title-main">    
+                <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=base_url()?>" itemprop="url" class="no-bg"><span itemprop="title">Trang chủ</span></a></div>
+                <?=$top_link?> 
+                <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=$top_link_seo;?>" itemprop="url"><span itemprop="title"><strong><?=$title;?></strong></span></a></div>
+            </div>                
+        </div>
+        <div>
+            <div>
+                <?php $this->load->view('templates/default/html/menuhuongdan');?>
+            </div>
+            <div>
+                <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'</div>';}?>
+                <?if($this->session->flashdata('message')){
+                    echo '<div class="show_success" id="msg">'.$this->session->flashdata('message').'</div>';
+                }if($this->session->flashdata('error')){
+                    echo '<div class="show_error" id="msg">'.$this->session->flashdata('error').'</div>';
+                }if($this->session->flashdata('notes')){
+                    echo '<div class="show_notice" id="msg">'.$this->session->flashdata('notes').'</div>';
+                }
+                ?> 
+                <?php
+                    // echo $this->router->fetch_class();die;
+                ?>
+                <?=$this->load->view($page)?>    
+            </div>
+        </div>
+
 		
-    <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'</div>';}?>
-    <?if($this->session->flashdata('message')){
-        echo '<div class="show_success" id="msg">'.$this->session->flashdata('message').'</div>';
-    }if($this->session->flashdata('error')){
-        echo '<div class="show_error" id="msg">'.$this->session->flashdata('error').'</div>';
-    }if($this->session->flashdata('notes')){
-        echo '<div class="show_notice" id="msg">'.$this->session->flashdata('notes').'</div>';
-    }
-    ?> 
-    <?=$this->load->view($page)?>    
 	</div>
     <?=$this->load->view('templates/default/html/footer')?>     
 </div>

@@ -45,18 +45,29 @@ class contact extends CI_Controller{
                 $message .="<br />Điện thoại: ".$contact['phone'];
                 $message .="<br />E-mail: ".$contact['email'];
                 $message .="<br />Nội dung: ".$contact['content'];
-                send($to,$subject,$message,$contact_name,$contact_email);
+                // send($to,$subject,$message,$contact_name,$contact_email);
                 $this->session->set_flashdata('message',lang('contact.sendok'));
                 redirect('contact');
             }
         }
         
         //show map
+        $aData = $this->helper->getContactSite();
+        $aData = $aData[0];
        
     	$this->gmap->GoogleMapAPI(); 
         $this->gmap->setMapType('map'); 
         $this->gmap->width= '1000px';
-        $this->gmap->addMarkerByAddress('17/11 Nguyễn Hữu Tiến, Phường Tây Thạnh, Quận Tân Phú, Tp. Hồ Chí Minh','ALOBUY VIỆT NAM - WEBSITE TMĐT SỐ 1 VIỆT NAM','<b>'.'</b>'.'<br />Địa chỉ:17/11 Nguyễn Hữu Tiến, P Tây Thạnh, Q Tân Phú, HCM '.'<br />Điện thoại: (08) 62 77 99 88'.' - Fax: (08) 6267 2381'.'<br />Email:info@alobuy.vn ');
+        $this->gmap->addMarkerByAddress('397 Tỉnh lộ 10, Phường An Lạc A, Quận Bình Tân, Tp. Hồ Chí Minh'
+            , $aData->name,'<b>'.'</b>'.'<br />Địa chỉ: ' . $aData->address . ' '.'<br />Điện thoại: ' . $aData->phone .' - Fax: ' . $aData->fax .'<br />Email: '. $aData->email);
+        $data['headerjs']   = $this->gmap->getHeaderJS();
+        $data['headermap']  = $this->gmap->getMapJS();
+        $data['onload']     = $this->gmap->printOnLoad();
+        $data['map']        = $this->gmap->printMap();
+        $data['sidebar']    = $this->gmap->printSidebar(); 
+       
+        
+        $data['aData'] = $aData;
         $data['headerjs'] 	= $this->gmap->getHeaderJS();
         $data['headermap'] 	= $this->gmap->getMapJS();
         $data['onload'] 	= $this->gmap->printOnLoad();
@@ -64,6 +75,7 @@ class contact extends CI_Controller{
         $data['sidebar'] 	= $this->gmap->printSidebar(); 
        
         
+        $data['aData'] = $aData;
         $data['message'] = $this->pre_message;
         //**load templates*******************
         $this->_templates['page']  = 'index';
