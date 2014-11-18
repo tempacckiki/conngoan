@@ -30,8 +30,8 @@ echo form_open('nhomhang/dels',  array('id' => 'admindata'));?>
         <td><?=$rs->ordering?></td>
         <td align="center">
             <?=icon_edit('nhomhang/edit/'.$rs->catid.'/'.(int)$this->uri->segment(4))?>
-            <span id="publish<?=$rs->catid?>"><?=icon_active("'shop_cat'","'catid'",$rs->catid,$rs->published,'nhomhang/published')?></span>
-            <?=icon_del('nhomhang/del/'.$rs->catid.'/'.(int)$this->uri->segment(4))?>        
+<!--             <span id="publish<?=$rs->catid?>"><?=icon_active("'shop_cat'","'catid'",$rs->catid,$rs->published,'nhomhang/published')?></span>
+ -->            <?=icon_del('nhomhang/del/'.$rs->catid.'/'.(int)$this->uri->segment(4))?>        
         </td>
     </tr>      
     <?

@@ -37,19 +37,22 @@
         <td>
             <select name="parentid" class="w200">
                 <?foreach($listcat as $cat):
-                $listsub = $this->danhmuc->get_sub_cat($cat->catid); 
+                    $listsub = $this->danhmuc->get_sub_cat($cat->catid); 
                 ?>
-                <option value="<?=$cat->catid?>" <?=($cat->catid == $maincat)?'selected="selected"':''?> style="font-size: 16px;font-weight: bold;"><?=$cat->catname?></option>
-                <?foreach($listsub as $val):
-                $listsub1 = $this->danhmuc->get_sub_cat($val->catid);
-                ?>
-                <option value="<?=$val->catid?>" <?=($val->catid == $subcat)?'selected="selected"':''?> style="font-size: 14px;font-weight: bold;">|___<?=$val->catname?></option>
-                <?foreach($listsub1 as $val1):
-                ?>
-                <option value="<?=$val1->catid?>" <?=($val1->catid == $subcat)?'selected="selected"':''?>>|___|___<?=$val1->catname?></option>
-                <?endforeach;?>
-                <?endforeach;?>
-                <?endforeach;?>
+                    <option value="<?=$cat->catid?>" <?=($cat->catid == $maincat)?'selected="selected"':''?> style="font-size: 16px;font-weight: bold;"><?=$cat->catname?>
+                    </option>
+<!--                     <?foreach($listsub as $val):
+                        $listsub1 = $this->danhmuc->get_sub_cat($val->catid);
+                    ?>
+                        <option value="<?=$val->catid?>" <?=($val->catid == $subcat)?'selected="selected"':''?> style="font-size: 14px;font-weight: bold;">|___<?=$val->catname?>
+                        </option>
+                        <?foreach($listsub1 as $val1):
+                        ?>
+                            <option value="<?=$val1->catid?>" <?=($val1->catid == $subcat)?'selected="selected"':''?>>|___|___<?=$val1->catname?>
+                            </option>
+                        <?endforeach;?>
+                    <?endforeach;?>
+ -->                <?endforeach;?>
             </select>
         </td>
     </tr>

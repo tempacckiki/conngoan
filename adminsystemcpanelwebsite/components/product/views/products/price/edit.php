@@ -22,7 +22,7 @@
         </td>
     </tr>
     <tr>
-        <td class="label">Tặng phẩm miền nam</td>
+<!--         <td class="label">Tặng phẩm miền nam</td>
         <td>
             <div>
                 <a href="javascript:;" id="add_miennam"><img height="16" width="16" src="<?=base_url()?>templates/icon/them.png"></a>
@@ -47,7 +47,7 @@
             <?}?>
             <div id="ds_tangpham_miennam"></div>
         </td>
-    </tr>
+ -->    </tr>
     <tr>
         <td class="label">Tình trạng</td>
         <td>

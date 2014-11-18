@@ -16,6 +16,9 @@ class vnit_model extends CI_Model{
         $result = array();
         $sProductIds = implode(',', $aProductIds);
         $sProductIds = trim($sProductIds, ',');
+        if(count($aProductIds) == 0 || strlen(trim($sProductIds)) == 0){
+            return $result;
+        }
 
         $limit = 4;
         if(null != $iLimit){

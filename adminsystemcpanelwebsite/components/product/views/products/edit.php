@@ -117,13 +117,13 @@ $(document).ready(function(){
  	<?php }?>
  	<li title="thongsokythuat"><a href="javascript:void(0)">Thông tin sản phẩm</a></li>
     <li title="baiviet"><a href="javascript:void(0)">Điểm nổi bậc</a></li>
-    <li title="tinhnang"><a href="javascript:void(0)">Tính năng nổi bật</a></li> 
+<!--     <li title="tinhnang"><a href="javascript:void(0)">Tính năng nổi bật</a></li> 
     
     <li title="thuoctinh"><a href="javascript:void(0)">Thuộc tính</a></li>
-    <li title="hinhanh"><a href="javascript:void(0)">Hình ảnh</a></li>
-    <li title="hinh360"><a href="javascript:void(0)">Hình ảnh 360</a></li>
+ -->    <li title="hinhanh"><a href="javascript:void(0)">Hình ảnh</a></li>
+<!--     <li title="hinh360"><a href="javascript:void(0)">Hình ảnh 360</a></li>
     <li title="video"><a href="javascript:void(0)">Video clip</a></li>
-</ul>
+ --></ul>
 <?=form_open(uri_string(),array('id'=>'admindata'))?>
 <input type="hidden" name="productid" id="productid" value="<?=$rs->productid?>">
 <div class="gray">
@@ -167,7 +167,7 @@ $(document).ready(function(){
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Nhà sản xuất</td>
+<!--                     <td class="label">Nhà sản xuất</td>
                     <td>
                         <select name="manufactureid" id="manufacture" class="w250">
                             <?foreach($listmanufacture as $val):?>
@@ -175,21 +175,22 @@ $(document).ready(function(){
                             <?endforeach;?>
                         </select>
                     </td>
-                </tr>
+ -->                </tr>
                 <tr>
-                    <td class="label">Sản phẩm trả góp</td>
+<!--                     <td class="label">Sản phẩm trả góp</td>
                     <td><input type="checkbox" name="tragop" value="1" <?=($rs->tragop == 1)?'checked="checked"':''?>></td>
-                </tr> 
+ -->                </tr> 
                 <tr>
                     <td class="label">Tùy chọn</td>
                     <td>
                         Hot<input type="checkbox" name="sphot" value="1" <?=($rs->sphot == 1)?'checked="checked"':''?>> 
-                        Mới<input type="checkbox" name="spmoi" value="1" <?=($rs->spmoi == 1)?'checked="checked"':''?>> 
+<!--                         Mới<input type="checkbox" name="spmoi" value="1" <?=($rs->spmoi == 1)?'checked="checked"':''?>> 
                         Khuyến mãi<input type="checkbox" name="spkhuyenmai" value="1" <?=($rs->spkhuyenmai == 1)?'checked="checked"':''?>> 
+ -->                        Bán chạy<input type="checkbox" name="spbanchay" value="1" <?=($rs->spbanchay == 1)?'checked="checked"':''?> /> 
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Mầu sắc</td>
+<!--                     <td class="label">Mầu sắc</td>
                     <td>
                         <ul class="icolor">
                             <?foreach($listcolor as $val):
@@ -203,29 +204,29 @@ $(document).ready(function(){
                             <?endforeach;?>
                         </ul>
                     </td>
-                </tr>
+ -->                </tr>
 
                 <tr>
-                    <td class="label">Bảo hành</td>
+<!--                     <td class="label">Bảo hành</td>
                     <td><input type="text" name="baohanh" value="<?=$rs->baohanh?>"> Tháng</td>
-                </tr>
+ -->                </tr>
                 
                 <tr>
-                    <td class="label">Mô tả phần giảm giá:</td>
+<!--                     <td class="label">Mô tả phần giảm giá:</td>
                     <td>
                     	 <textarea style="height: 50px;width: 500px;" name="deal"><?=$rs->deal?></textarea>
                     	 
                     </td>
-                </tr>
+ -->                </tr>
             </table>
 
             <table class="form">
                 <tr>
-                    <td class="label">Bộ sản phẩm đi kèm</td>
+<!--                     <td class="label">Bộ sản phẩm đi kèm</td>
                     <td>
                         <textarea style="height: 50px;width: 500px;" name="phukien"><?=$rs->phukien?></textarea>
                     </td>
-                </tr>
+ -->                </tr>
             </table>
         </div>
 
@@ -360,7 +361,7 @@ $(document).ready(function(){
     <div id="giaban" class="content">
     <?=form_open(uri_string(),array('id'=>'adminform_price'))?>
     <input type="hidden" name="productid" value="<?=$rs->productid?>">
-        <div style="margin-bottom: 10px;">Chọn Tỉnh, Thành phố: 
+        <div style=" display: none; margin-bottom: 10px;">Chọn Tỉnh, Thành phố: 
         <select name="city_id" id="city_id" onchange="get_price(this.value)">
             <option value="0">Chọn Tỉnh, Thành phố</option>
             <?foreach($listcity as $val):?>
@@ -407,23 +408,23 @@ $(document).ready(function(){
 <script type="text/javascript">
 
 $(function() {
-    var i = $('div#tangpham_miennam').size()+ 1;
-    $('a#add_miennam').click(function() {
-        $('<div id="tangpham_miennam" style="padding:5px">'+
+    // var i = $('div#tangpham_miennam').size()+ 1;
+    // $('a#add_miennam').click(function() {
+    //     $('<div id="tangpham_miennam" style="padding:5px">'+
 
-        '<input type="text" class="w300" name="tangpham_miennam_name[]"> Áp dụng từ <input type="text" name="tangpham_miennam_batdau[]" id="batdau'+i+'" class="w100" value="">'+
-        ' <a href="javascript:;" onclick="javascript:NewCssCal (\'batdau'+i+'\',\'yyyyMMdd\')"><img src="<?=base_url()?>templates/icon/date.png" alt=""></a>'+
-        ' Đến <input type="text" name="tangpham_miennam_ketthuc[]"  id="ketthuc'+i+'" class="w100" value="">'+
-        ' <a href="javascript:;" onclick="javascript:NewCssCal (\'ketthuc'+i+'\',\'yyyyMMdd\')"><img src="<?=base_url()?>templates/icon/date.png" alt=""></a>'+
-        '</div>').appendTo('#ds_tangpham_miennam');
-        i++;
-    });
-    $('a#remove_miennam').click(function() {
-        if(i > 2) {
-            $('div#ds_tangpham_miennam #tangpham_miennam:last').remove();
-            i--;
-        }
-    });
+    //     '<input type="text" class="w300" name="tangpham_miennam_name[]"> Áp dụng từ <input type="text" name="tangpham_miennam_batdau[]" id="batdau'+i+'" class="w100" value="">'+
+    //     ' <a href="javascript:;" onclick="javascript:NewCssCal (\'batdau'+i+'\',\'yyyyMMdd\')"><img src="<?=base_url()?>templates/icon/date.png" alt=""></a>'+
+    //     ' Đến <input type="text" name="tangpham_miennam_ketthuc[]"  id="ketthuc'+i+'" class="w100" value="">'+
+    //     ' <a href="javascript:;" onclick="javascript:NewCssCal (\'ketthuc'+i+'\',\'yyyyMMdd\')"><img src="<?=base_url()?>templates/icon/date.png" alt=""></a>'+
+    //     '</div>').appendTo('#ds_tangpham_miennam');
+    //     i++;
+    // });
+    // $('a#remove_miennam').click(function() {
+    //     if(i > 2) {
+    //         $('div#ds_tangpham_miennam #tangpham_miennam:last').remove();
+    //         i--;
+    //     }
+    // });
 });
 
 </script>

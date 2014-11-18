@@ -1,5 +1,10 @@
+tao folder
+	/alobuy0862779988/bannerads/adspopup (2 folders)
 
--- 20141116
+
+
+
+---------------------------------------------------------------- 20141116
 CREATE TABLE IF NOT EXISTS `bannerads` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `link` varchar(254) DEFAULT NULL,

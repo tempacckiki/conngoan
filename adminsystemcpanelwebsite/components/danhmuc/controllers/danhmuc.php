@@ -1,4 +1,6 @@
 <?php
+require_once (ROOT . 'debug/debug.php');
+
 class danhmuc extends CI_Controller{
     protected $_templates;
     function __construct(){
@@ -85,6 +87,7 @@ class danhmuc extends CI_Controller{
           }
 
       }
+
       $data['message'] = $this->pre_message;
       $this->_templates['page'] = 'add';
       $this->templates->load($this->_templates['page'],$data);

@@ -286,4 +286,6 @@ $(document).ready(function(){
 	});
 });	
 </script>
+
+<?=$this->load->view('templates/default/html/adspopup')?>
   

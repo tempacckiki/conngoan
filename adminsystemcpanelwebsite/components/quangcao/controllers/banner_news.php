@@ -281,4 +281,69 @@ class banner_news extends CI_Controller{
         }
     }    
 
+    public function adspopup(){
+        $data['title'] = 'Quảng cáo popup';
+
+        $this->form_validation->set_rules('link','Link','required');       
+        if($this->form_validation->run() === FALSE){
+            $this->pre_message = validation_errors();
+        }else{
+            $img =  $this->input->post('img');
+            if(!empty($img)){
+                $this->load->helper('img_helper');
+                $imgRoot    = ROOT.'alobuy0862779988/bannerads/adspopup/full_images/'.$img;
+                $imgThumb   = ROOT.'alobuy0862779988/bannerads/adspopup/thumb/'.$img;
+                vnitResizeImage($imgRoot,$imgThumb,90,90);
+            }   
+            // delete old data
+            $this->bannerads_model->deleteByPosition(4); 
+            // insert new data
+            $aVals = array(
+                'link' => $this->input->post('link'), 
+                'images' => $this->input->post('img'), 
+                'published' => $this->input->post('published'), 
+                'position' => 4, 
+            );
+            $id = $this->bannerads_model->addBanner($aVals);
+        }        
+
+        $aBannerAds = $this->bannerads_model->getBannerByPosition(4);
+        if(isset($aBannerAds->id)){
+            $data['aBannerAds'] = $aBannerAds;
+        }
+
+        $data['message'] = $this->pre_message;
+        $this->_templates['page'] = 'bannernews/adspopup';
+        $this->templates->load($this->_templates['page'],$data);
+    }
+
+    public function uploader_adspopup(){
+        // $ProductID = $this->uri->segment(3);
+        /// $session_info = $this->session->userdata('session_id');
+        $dir        = ROOT.'alobuy0862779988/bannerads/adspopup/full_images/';
+        //chmod($uploaddir,0777);
+        $size=$_FILES['uploadfile']['size'];
+        if($size>204857600)
+        {
+            echo "file_biger";
+            unlink($_FILES['uploadfile']['tmp_name']);
+            //exit;
+        }
+        $filename = stripslashes($_FILES['uploadfile']['name']);
+        $i = strrpos($filename,".");
+        if (!$i) { return ""; }
+        $l = strlen($filename) - $i;
+        $extension = substr($filename,$i+1,$l);
+        $extension = strtolower($extension);
+        $file_name = str_replace($extension,'',$filename);
+        $name = time();
+        $filename = $dir.$name.'.'.$extension;
+        $file_ext = $name.'.'.$extension;
+        if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $filename)) {
+            echo $file_ext;
+    
+        } else {
+            echo 'error';
+        }
+    }    
 }

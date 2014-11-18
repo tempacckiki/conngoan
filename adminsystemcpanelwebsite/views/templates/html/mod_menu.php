@@ -5,13 +5,13 @@
         <li>
             <a href="<?=site_url('admincp')?>" style="padding-right: 23px;" class=""><span>Bảng điều khiển</span></a>
             <ul>
-                <li><a href="<?=site_url('vcache')?>">Lưu Cache</a></li>
+<!--                 <li><a href="<?=site_url('vcache')?>">Lưu Cache</a></li>
                 <li><a href="<?=site_url('siteconfig/info')?>">Cấu hình website</a></li>
-                <li><a href="<?=site_url('accountinfo')?>">Thông tin tài khoản</a></li>
-                <li><a href="<?=site_url('login/logout')?>">Thoát</a></li>
+ -->                <li><a href="<?=site_url('accountinfo')?>">Thông tin tài khoản</a></li>
+                <!-- <li><a href="<?=site_url('login/logout')?>">Thoát</a></li> -->
             </ul>
         </li>
-        <?if($this->permit->get_permit_mainmenu('thanhvien')){?> 
+<!--         <?if($this->permit->get_permit_mainmenu('thanhvien')){?> 
         <li>
             <a href=""><span>Thành viên</span></a>
             <ul>
@@ -33,22 +33,22 @@
             </ul>
         </li>
         <?}?>
-        <?if($this->permit->get_permit_mainmenu('sanpham')){?>
+ -->        <?if($this->permit->get_permit_mainmenu('sanpham')){?>
         <li>
             <a href="#" style="padding-right: 23px;" class=""><span>Gian hàng</span></a>
             <ul>
                 <?if($this->permit->get_permit_icon('product/shop/listproduct')){?>
                 <li>
                     <a href="<?=site_url('product/shop/listproduct/0/25')?>">Quản lý sản phẩm</a>
-                    <ul>
+<!--                     <ul>
                         <li><a href="<?=site_url('product/producthome/ds')?>">Sản phẩm trang chủ home</a></li>
                         <li><a href="<?=site_url('product/producthome/hot')?>">Khuyến mãi bán chạy home </a></li>
                         <li><a href="<?=site_url('product/producthome/muanhieu')?>">Sản phẩm khuyến mãi home</a></li>
                         <li><a href="<?=site_url('product/producthome/cat')?>">Sản phẩm hot chuyên mục</a></li>
                     </ul>
-                </li>
+ -->                </li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('product/order/listorder')){?>
+<!--                 <?if($this->permit->get_permit_icon('product/order/listorder')){?>
                 <li>
                     <a href="<?=site_url('product/order/listorder/moinhat')?>">Đơn hàng</a>
                     <ul>
@@ -56,22 +56,22 @@
                     </ul>
                 </li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('nhomhang/dsnhomhang')){?>
+ -->                <?if($this->permit->get_permit_icon('nhomhang/dsnhomhang')){?>
                 <li><a href="<?=site_url('nhomhang/dsnhomhang')?>">Nhóm hàng</a></li>
                 <?}?>
                 <?if($this->permit->get_permit_icon('danhmuc/ds')){?>
                 <li><a href="<?=site_url('danhmuc/ds')?>">Danh mục</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('product/manufacture/listmanufacture')){?>
+<!--                <?if($this->permit->get_permit_icon('product/manufacture/listmanufacture')){?>
                 <li><a href="<?=site_url('product/manufacture/listmanufacture')?>">Hãng sản xuất</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('baohanh/ds')){?>
+                 <?if($this->permit->get_permit_icon('baohanh/ds')){?>
                 <li><a href="<?=site_url('baohanh/ds')?>">Điểm bảo hành</a></li>
                 <?}?>
                 <?if($this->permit->get_permit_icon('icolor/ds')){?>
                 <li><a href="<?=site_url('icolor/ds')?>">Bảng mầu sản phẩm</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('features/manage/listmanage')){?>
+                 <?if($this->permit->get_permit_icon('features/manage/listmanage')){?>
                 <li><a href="<?=site_url('features/manage/listmanage')?>">Thuộc tính sản phẩm</a></li>
                 <?}?>
                 <?if($this->permit->get_permit_icon('features/manage/feature_cat')){?>
@@ -87,9 +87,9 @@
                 <?if($this->permit->get_permit_icon('phuongthuc/vanchuyen/ds')){?>
                 <li><a href="<?=site_url('phuongthuc/vanchuyen/ds')?>">Phương thức vận chuyển</a></li>
                 <?}?>
-                
                  <li><a href="<?=site_url('cat_info/detailnews/ds')?>">Thông tin chuyên mục</a></li>
                  <li><a href="<?=site_url('product/shop/globalsettings')?>">Thiết lập cho website</a></li>
+ -->                
 				<!-- 
                 <?if($this->permit->get_permit_icon('callme/ds')){?>
                 <li><a href="<?=site_url('callme/ds')?>">Liên hệ tư vấn</a></li>
@@ -102,13 +102,13 @@
         </li> 
         <?}?>
         
-        <li><a href="#" style="padding-right: 23px;" class=""><span>Sàn giá rẻ</span></a>
+<!--         <li><a href="#" style="padding-right: 23px;" class=""><span>Sàn giá rẻ</span></a>
         	<ul>
         		<li>  <a href="<?=site_url('deal/productdeal/ds');?>" style="padding-right: 23px;" class=""><span>Sản phẩm sản giá rẻ</span></a></li>
-        		<!-- <li>  <a href="<?=site_url('adsdeal/bannertop/ds');?>" style="padding-right: 23px;" class=""><span>Banner Quảng cáo head</span></a></li> -->
-        	</ul>
+ -->        		<!-- <li>  <a href="<?=site_url('adsdeal/bannertop/ds');?>" style="padding-right: 23px;" class=""><span>Banner Quảng cáo head</span></a></li> -->
+<!--         	</ul>
         </li>
-        
+ -->        
         <!--  
         <?if($this->permit->get_permit_mainmenu('tragop')){?> 
         <li>
@@ -128,13 +128,13 @@
         <li>
             <a href="#" style="padding-right: 23px;" class=""><span>Tin tức</span></a>
             <ul>
-                <?if($this->permit->get_permit_icon('tintuc/danhmuc')){?> 
+<!--                 <?if($this->permit->get_permit_icon('tintuc/danhmuc')){?> 
                 <li><a href="<?=site_url('tintuc/danhmuc')?>">Danh mục</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('tintuc/baiviet')){?> 
+ -->                <?if($this->permit->get_permit_icon('tintuc/baiviet')){?> 
                 <li><a href="<?=site_url('tintuc/baiviet')?>">Danh sách bài viết</a></li>
                 <?}?>
-                 <li><a href="<?=site_url('tintuc/newsproduct/getNewsProduct')?>">Quản lý chi tiết sản phẩm</a></li>
+<!--                  <li><a href="<?=site_url('tintuc/newsproduct/getNewsProduct')?>">Quản lý chi tiết sản phẩm</a></li>
                  <li><a href="<?=site_url('tintuc/readMany')?>">Quản lý thông tin tiêu điểm</a></li>
                  <li><a href="<?=site_url('tintuc/readThumb')?>">Quản lý bài viết thumb</a></li>
                  <li><a href="<?=site_url('tintuc/photonews/readPhoto')?>">Quản lý bài viết ảnh đẹp</a></li>
@@ -145,7 +145,7 @@
                 <?if($this->permit->get_permit_icon('tintuc/listcomment')){?> 
                 <li><a href="<?=site_url('tintuc/listcomment')?>">Bình luận</a></li>
                 <?}?>
-            </ul>
+ -->            </ul>
         </li>
         <?}?>
         
@@ -155,7 +155,7 @@
         <li>
             <a href="#" style="padding-right: 23px;" class=""><span>Quảng cáo</span></a>
             <ul>
-            	 <?if($this->permit->get_permit_icon('quangcao/chitiet/ds')){?>
+<!--             	 <?if($this->permit->get_permit_icon('quangcao/chitiet/ds')){?>
                 <li><a href="<?=site_url('quangcao/chitiet/ds')?>">Quảng cáo từng chuyên mục top</a></li>
                 <?}?>
 				 <?if($this->permit->get_permit_icon('quangcao/left/ds')){?>
@@ -171,19 +171,20 @@
                 <?if($this->permit->get_permit_icon('quangcao/bannertruot')){?>
                 <li><a href="<?=site_url('quangcao/bannertruot')?>">Banner trượt</a></li>
                 <?}?>
-                <!-- 
+ -->                <!-- 
                  <?if($this->permit->get_permit_icon('quangcao/danhmuc/ds')){?>
                 <li><a href="<?=site_url('quangcao/danhmuc/ds')?>">QC Danh mục trang chủ</a></li>
                 <?}?>
                  -->
-                <?if($this->permit->get_permit_icon('quangcao/bannertop/ds')){?>
+<!--                 <?if($this->permit->get_permit_icon('quangcao/bannertop/ds')){?>
                 <li><a href="<?=site_url('quangcao/bannertop/ds')?>">Quảng cáo top trang chủ</a></li>
                 <?}?>
                 <li><a href="<?=site_url('quangcao/banner_newspage/listads')?>">Quảng cáo tin tức</a></li>
                 <li><a href="<?=site_url('quangcao/banner_news')?>">Quảng cáo footer</a></li>
-                <li><a href="<?=site_url('quangcao/banner_news/banner1')?>">Quảng cáo banner 1</a></li>
+ -->                <li><a href="<?=site_url('quangcao/banner_news/banner1')?>">Quảng cáo banner 1</a></li>
                 <li><a href="<?=site_url('quangcao/banner_news/banner2')?>">Quảng cáo banner 2</a></li>
                 <li><a href="<?=site_url('quangcao/banner_news/banner3')?>">Quảng cáo banner 3</a></li>
+                <li><a href="<?=site_url('quangcao/banner_news/adspopup')?>">Quảng cáo popup</a></li>
                 
                  <!--  
                 <?if($this->permit->get_permit_icon('quangcao/khuyenmai/index')){?>
@@ -217,36 +218,36 @@
         <li>
             <a href="#" style="padding-right: 23px;" class=""><span>Mở rộng</span></a>
             <ul>
-                <?if($this->permit->get_permit_icon('suppermarket/listsupper')){?>
+<!--                 <?if($this->permit->get_permit_icon('suppermarket/listsupper')){?>
                 <li><a href="<?=site_url('suppermarket/listsupper')?>">Hệ thống siêu thị</a></li>
                 <?}?>
                 <li><a href="<?=site_url('dichvu')?>">Dịch vụ</a></li>
-                <li><a href="<?=site_url('subscriptions/index')?>">Đăng ký nhận khuyến mãi</a></li>
-                <?if($this->permit->get_permit_icon('support/ds')){?>
+ -->                <li><a href="<?=site_url('subscriptions/index')?>">Đăng ký nhận khuyến mãi</a></li>
+<!--                 <?if($this->permit->get_permit_icon('support/ds')){?>
                 <li><a href="<?=site_url('support/ds')?>">Hỗ trợ trực tuyến</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('createmenu/ds')){?>
+ -->                <?if($this->permit->get_permit_icon('createmenu/ds')){?>
                 <li><a href="<?=site_url('createmenu/ds')?>">Xây dụng Main Menu</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('giamgia/ds')){?>
+<!--                 <?if($this->permit->get_permit_icon('giamgia/ds')){?>
                 <li><a href="<?=site_url('giamgia/ds')?>">Mã giảm giá</a></li>
                 <?}?>
                 <?if($this->permit->get_permit_icon('thanhpho/listthanhpho')){?>
                 <li><a href="<?=site_url('thanhpho/listthanhpho')?>">Tỉnh, Thành phố</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('faq/listfaq')){?>
+ -->                <?if($this->permit->get_permit_icon('faq/listfaq')){?>
                 <li><a href="<?=site_url('faq/listfaq')?>">Hướng dẫn</a></li>
                 <?}?>
-                <?if($this->permit->get_permit_icon('eskin/ds')){?>
+<!--                 <?if($this->permit->get_permit_icon('eskin/ds')){?>
                 <li><a href="<?=site_url('eskin/ds')?>">Email Templates</a></li> 
                 <?}?>
                 <?if($this->permit->get_permit_icon('csdl/index')){?>
                 <li><a href="<?php echo site_url('csdl/index')?>">Cơ sở dữ liệu</a></li>
                 <?}?>
-            </ul>
+ -->            </ul>
         </li>
         <?}?>
-        <?if($this->permit->get_permit_mainmenu('ex/im')){?>    
+<!--         <?if($this->permit->get_permit_mainmenu('ex/im')){?>    
         <li>
             <a href="#"><span>Export/Import</span></a>
             <ul>
@@ -259,7 +260,6 @@
             </ul>
         </li>
         <?}?>
-        
         <li>
         	<a href="">Đấu giá</a>
         	<ul>
@@ -269,12 +269,13 @@
                         <li><a href="<?=site_url('daugia/chienthang/ds')?>">Dành chiến thắng</a></li>
              </ul>
         </li>
+ -->        
         <li>
             <a href="<?=site_url('contact')?>"><span>Liên hệ</span></a>
            
         </li>
         
-        <li><a href="<?=site_url('sitemap');?>">Tạo sitemap</a></li>
+<!--         <li><a href="<?=site_url('sitemap');?>">Tạo sitemap</a></li>
         
         <li><a href="#">Xóa cache</a>
         	 <ul>
@@ -284,7 +285,7 @@
         	 </ul>
         
         </li> 
-       
+ -->       
     </ul>
 <div class="clear"></div>
 </div>

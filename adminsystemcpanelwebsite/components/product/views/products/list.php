@@ -52,7 +52,7 @@
             </td>
 
             <td style="vertical-align: middle;padding-right: 20px;">
-                <select name="city_id" id="city_ids">
+                <select style="display: none;" name="city_id" id="city_ids">
                     <?foreach($list_city as $val):?>
                     <option value="<?=$val->city_id?>" <?=($city_id == $val->city_id)?'selected="selected"':'';?>><?=$val->city_name?></option>
                     <?endforeach;?>
@@ -105,8 +105,8 @@ echo form_open('product/shop/delsproduct',  array('id' => 'admindata'));?>
             <th class="checkbox"><input type="checkbox" name="sa" id="sa" onclick="check_chose('sa', 'ar_id[]', 'admindata')"></th>
             <th style="width: 70px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/shop_product.productid/asc','ID')?></th>
             <th style="width: 70px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/barcode/asc','Mã hàng')?></th>
-            <th style="width: 70px;">Hình ảnh</th>
-            <th style="width: 85px;">Icon</th>
+<!--             <th style="width: 70px;">Hình ảnh</th>
+ -->            <th style="width: 85px;">Icon</th>
             <th><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/productname/asc','Tên sản phẩm')?></th>
              <?php    
 			    if(($editPrice == 1 && $this->session->userdata('user_id') == $user_idPrice) || $this->session->userdata('group_id') >=17){
@@ -122,8 +122,8 @@ echo form_open('product/shop/delsproduct',  array('id' => 'admindata'));?>
             </th>
             <?php }?>
             <th style="width: 40px;">VAT</th>
-            <th style="width: 40px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/orderhome/asc','Trang chủ')?></th>
-            <th style="width: 70px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/tinhtrang/asc','Tình trạng')?></th>
+<!--             <th style="width: 40px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/orderhome/asc','Trang chủ')?></th>
+ -->            <th style="width: 70px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/tinhtrang/asc','Tình trạng')?></th>
             <th style="width: 40px;"><?=vnit_order('product/shop/listproduct/'.$catid.'/'.$city_id.'/'.$page.'/thutu/asc','Thứ tự')?></th>
             <th style="width: 40px;">CN</th>
         </tr>        
@@ -138,14 +138,14 @@ echo form_open('product/shop/delsproduct',  array('id' => 'admindata'));?>
         <td><input  type="checkbox" name="ar_id[]" value="<?php echo $rs->productid;?>"></td>
         <td><?=$rs->productid?></td>
         <td><?=$rs->barcode?></td>
-        <td>
+<!--         <td>
             <img src="<?=base_url_img()?>alobuy0862779988/0862779988product/80/<?=$rs->productimg?>" alt="">
         </td>
-        <td>
+ -->        <td>
             <div><input type="checkbox" id="sphot_<?=$rs->productid?>" value="1" <?=($rs->sphot == 1)?'checked="checked"':''?>>Hot</div>
-            <div><input type="checkbox" id="spmoi_<?=$rs->productid?>" value="1" <?=($rs->spmoi == 1)?'checked="checked"':''?>>New</div>
+<!--             <div><input type="checkbox" id="spmoi_<?=$rs->productid?>" value="1" <?=($rs->spmoi == 1)?'checked="checked"':''?>>New</div>
             <div><input type="checkbox" id="spkhuyenmai_<?=$rs->productid?>" value="1" <?=($rs->spkhuyenmai == 1)?'checked="checked"':''?>>Khuyến mãi</div>
-            <div><input type="checkbox" id="spbanchay_<?=$rs->productid?>" value="1" <?=($rs->spbanchay == 1)?'checked="checked"':''?>>Bán chạy</div>
+ -->            <div><input type="checkbox" id="spbanchay_<?=$rs->productid?>" value="1" <?=($rs->spbanchay == 1)?'checked="checked"':''?>>Bán chạy</div>
         </td>
         <td><?=$rs->productname?></td>
          <?php    
@@ -162,8 +162,8 @@ echo form_open('product/shop/delsproduct',  array('id' => 'admindata'));?>
         </td>
         <?php }?>
         <td><div class="fr"><input type="checkbox" value="1" class="w30" <?=($rs->vat == 1)?'checked="checked"':''?>></div></td>
-        <td align="center"><input type="checkbox" id="home_<?=$rs->productid?>" value="1" <?=($rs->home == 1)?'checked="checked"':''?>></td>
-        <td>
+<!--         <td align="center"><input type="checkbox" id="home_<?=$rs->productid?>" value="1" <?=($rs->home == 1)?'checked="checked"':''?>></td>
+ -->        <td>
             <div>
                 <select name="tinhtrang" id="tinhtrang_<?=$rs->productid?>">
                     <option value="1" <?=($rs->tinhtrang == 1)?'selected="selected"':''?>>Còn hàng</option>
@@ -178,14 +178,14 @@ echo form_open('product/shop/delsproduct',  array('id' => 'admindata'));?>
 
 
         <td align="center">
-            <?if($this->permit->get_permit_icon('product/shop/save_ajax')){?>
+<!--             <?if($this->permit->get_permit_icon('product/shop/save_ajax')){?>
             <a href="javascript:;" onclick="save_edit(<?=$rs->productid?>)">
             <img src="<?=base_url()?>templates/icon/save.png" alt="">
             </a>
             <?}?>
-            <?=icon_edit('product/shop/edit/'.$rs->productid.'/'.$catid.'/'.$city_id.'/'.$page)?><br />
-            <span id="publish<?=$rs->productid?>"><?=icon_active("'shop_product'","'productid'",$rs->productid,$rs->published,'product/shop/published')?></span>
-            <?=icon_del('product/shop/delproduct/'.$rs->productid.'/'.$catid.'/'.$city_id.'/'.$page)?>
+ -->            <?=icon_edit('product/shop/edit/'.$rs->productid.'/'.$catid.'/'.$city_id.'/'.$page)?><br />
+<!--             <span id="publish<?=$rs->productid?>"><?=icon_active("'shop_product'","'productid'",$rs->productid,$rs->published,'product/shop/published')?></span>
+ -->            <?=icon_del('product/shop/delproduct/'.$rs->productid.'/'.$catid.'/'.$city_id.'/'.$page)?>
             <script type="text/javascript">
             $(document).ready(function() {
                 $('#giaban_<?=$rs->productid?>').priceFormat({});

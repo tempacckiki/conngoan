@@ -119,13 +119,13 @@ $(document).ready(function(){
    <?php }?>
     <li title="thongsokythuat"><a href="javascript:void(0)">Thông tin sản phẩm</a></li>
     <li title="baiviet"><a href="javascript:void(0)">Điểm nổi bậc</a></li>
-    <li title="tinhnang"><a href="javascript:void(0)">Tính năng nổi bật</a></li>
+<!--     <li title="tinhnang"><a href="javascript:void(0)">Tính năng nổi bật</a></li>
    
     <li title="thuoctinh"><a href="javascript:void(0)">Thuộc tính</a></li>
-    <li title="hinhanh"><a href="javascript:void(0)">Hình ảnh</a></li>
-    <li title="hinh360"><a href="javascript:void(0)">Hình ảnh 360</a></li>
+ -->    <li title="hinhanh"><a href="javascript:void(0)">Hình ảnh</a></li>
+<!--     <li title="hinh360"><a href="javascript:void(0)">Hình ảnh 360</a></li>
     <li title="video"><a href="javascript:void(0)">Video clip</a></li>
-
+ -->
 </ul>
 <?=form_open(uri_string(),array('id'=>'admindata'))?>
 <input type="hidden" name="random_img" value="<?=$random_img?>">
@@ -174,28 +174,28 @@ $(document).ready(function(){
                 </td>
             </tr>
             <tr>
-                <td class="label">Nhà sản xuất</td>
+<!--                 <td class="label">Nhà sản xuất</td>
                 <td>
                 
                     <select name="manufactureid" id="manufacture" class="w250">
                     </select>
                 </td>
-            </tr>
+ -->            </tr>
                 <tr>
-                    <td class="label">Sản phẩm trả góp</td>
+<!--                     <td class="label">Sản phẩm trả góp</td>
                     <td><input type="checkbox" name="tragop" value="1"></td>
-                </tr>
+ -->                </tr>
             <tr>
                 <td class="label">Tùy chọn</td>
                 <td>
                     Hot<input type="checkbox" name="sphot" value="1"> 
-                    Mới<input type="checkbox" name="spmoi" value="1"> 
+<!--                     Mới<input type="checkbox" name="spmoi" value="1"> 
                     Khuyến mãi<input type="checkbox" name="spkhuyenmai" value="1"> 
-                    Bán chạy<input type="checkbox" name="spbanchay" value="1"> 
+ -->                    Bán chạy<input type="checkbox" name="spbanchay" value="1"> 
                 </td>
             </tr>
             <tr>
-                <td class="label">Mầu sắc</td>
+<!--                 <td class="label">Mầu sắc</td>
                 <td>
                     <ul class="icolor">
                         <?foreach($listcolor as $val):?>
@@ -206,28 +206,28 @@ $(document).ready(function(){
                         <?endforeach;?>
                     </ul>
                 </td>
-            </tr>
+ -->            </tr>
 
             <tr>
-                <td class="label">Bảo hành</td>
+<!--                 <td class="label">Bảo hành</td>
                 <td><input type="text" name="baohanh" value="12"> Tháng</td>
-            </tr>
+ -->            </tr>
 			<tr>
-                    <td class="label">Mô tả phần giảm giá:</td>
+<!--                     <td class="label">Mô tả phần giảm giá:</td>
                     <td>
                     	 <textarea style="height: 50px;width: 500px;" name="deal"></textarea>
                     	 
                     </td>
-               </tr>
+ -->               </tr>
         </table>
 
             <table class="form">
                 <tr>
-                    <td class="label">Bộ sản phẩm đi kèm</td>
+<!--                     <td class="label">Bộ sản phẩm đi kèm</td>
                     <td>
                         <textarea style="height: 50px;width: 500px;" name="phukien"><?=set_value('phukien')?></textarea>
                     </td>
-                </tr>
+ -->                </tr>
 
             </table>
         </div>
@@ -311,7 +311,7 @@ $(document).ready(function(){
         
         <!-- Gia ban-->
         <div id="giaban" class="content">
-        <div style="margin-bottom: 10px;">Chọn Tỉnh, Thành phố: 
+        <div style="display: none; margin-bottom: 10px;">Chọn Tỉnh, Thành phố: 
             <select name="city_id" id="city_id">
 
                 <?foreach($listcity as $val):?>
@@ -343,7 +343,7 @@ $(document).ready(function(){
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">Tặng phẩm miền nam</td>
+<!--                     <td class="label">Tặng phẩm miền nam</td>
                     <td>
                         <div>
                             <a href="javascript:;" id="add_miennam"><img height="16" width="16" src="<?=base_url()?>templates/icon/them.png"></a>
@@ -356,7 +356,7 @@ $(document).ready(function(){
 
                         <div id="ds_tangpham_miennam"></div>
                     </td>
-                </tr>
+ -->                </tr>
                 <tr>
                     <td class="label">Tình trạng</td>
                     <td>

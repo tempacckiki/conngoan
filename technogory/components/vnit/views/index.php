@@ -58,7 +58,7 @@
 	        					<ul>
 	        			<?php
 				        		foreach ($aProducts as $key => $aProduct) {
-	                    			$tangpham 		= addli($aProduct->phukien);
+	                    			// $tangpham 		= addli($aProduct->phukien);
 				                    $productid  	= $aProduct->productid;
 				                    $productname 	= $aProduct->productname;
 				                    $producturl 	= $aProduct->producturl;
